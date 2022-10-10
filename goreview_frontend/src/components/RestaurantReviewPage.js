@@ -1,4 +1,4 @@
-import ReviewList from "./ReviewList";
+import ReviewList from "./ReviewList"
 
 const RestaurantReviewPage = ({restaurant}) => {
 
@@ -6,7 +6,7 @@ const RestaurantReviewPage = ({restaurant}) => {
     
     return (
         <>
-            <ReviewList/>
+            <h3>Hey from RestaurantReviewPage</h3>
         </>
     )
 }
