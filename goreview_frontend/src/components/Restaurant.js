@@ -8,14 +8,11 @@ const Restaurant = ({restaurant}) => {
 
     return (
         <>
+        <div id="restaurant-card">
             <h2>{restaurant.name}</h2>
             <img></img>
-            <ul>
-                <li>Location: {restaurant.location}</li>
-                <li>Cuisine: {restaurant.cuisine}</li>
-                <li>Accessiblity: {restaurant.accessibility}</li>
-                <li>Rating: {restaurant.rating}</li>
-            </ul>
+                <p>Location: {restaurant.location}</p>
+                <p>Cuisine: {restaurant.cuisine}</p>
             <BrowserRouter>
             <button><Link to={route}>Read more</Link></button>
             <Routes>
@@ -23,7 +20,7 @@ const Restaurant = ({restaurant}) => {
             </Routes>
             </BrowserRouter>
 
-        
+        </div>
         </>
 
     )

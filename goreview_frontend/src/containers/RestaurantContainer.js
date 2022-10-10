@@ -43,9 +43,9 @@ const RestaurantContainer = () => {
     },[])
 
     return (
-        <>
+        <div id="container">
             <RestaurantList restaurants={restaurants} reviews={reviews} />
-        </>
+        </div>
     )
 
 }

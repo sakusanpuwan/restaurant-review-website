@@ -1,13 +1,40 @@
 #navbar {
     display: flex;
     justify-content: space-between;
+    margin: 20px;
 }
 
 #nav-links {
     list-style-type: none;
+
+    
 }
 
 .nav-link {
     margin-right: 70px;
     text-decoration: none;
 }
+
+.nav-link li {
+    align-items: right;
+    align-content: right;
+}
+
+#restaurant-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+
+}
+
+#restaurant-card{
+    border: 2px solid black;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#container{
+    margin: 20px;
+}
+
+

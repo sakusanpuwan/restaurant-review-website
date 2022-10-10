@@ -6,8 +6,10 @@ const RestaurantList = ({restaurants, reviews}) => {
 
     return (
         <>
-            <h2>Restaurant List:</h2>
+        <h2>Restaurant List:</h2>
+        <div id="restaurant-list">
             {restaurantComponents}
+        </div>
         </>
     )
 

@@ -6,7 +6,7 @@ const Navigation = () => {
                 <div>
                     <ul id="nav-links">
                     <li><a class="nav-link" href="#about-section">Register</a></li>
-                    <li><a class="nav-link" href="#projects">My account</a></li>
+                    <li><a class="nav-link" href="#projects">My Account</a></li>
                     </ul>
                     <input type="text" name="search" placeholder="Search"></input>
                 </div>
