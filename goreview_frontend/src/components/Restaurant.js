@@ -24,7 +24,7 @@ const Restaurant = ({restaurant}) => {
                 <li>Rating: {restaurant.rating}</li>
             </ul>
             <BrowserRouter>
-            <button><Link to={route}>Submit review</Link></button>
+            <button><Link to={route}>Read more</Link></button>
             <Routes>
                 <Route path={route} element={<RestaurantReviewPage restaurant={restaurant}/>}/>
             </Routes>
