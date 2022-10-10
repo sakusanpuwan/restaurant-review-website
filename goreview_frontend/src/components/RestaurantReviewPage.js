@@ -5,6 +5,7 @@ const RestaurantReviewPage = ({restaurant}) => {
     return (
         <>
             <ReviewList/>
+            <ReviewForm/>
         </>
     )
 }
