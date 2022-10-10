@@ -2,7 +2,7 @@ import Restaurant from "./Restaurant"
 
 const RestaurantList = ({restaurants, reviews}) => {
 
-    const restaurantComponents = restaurants.map(restaurant => <Restaurant restaurant={restaurant} />);
+    const restaurantComponents = restaurants.map(restaurant => <Restaurant restaurant={restaurant} reviews = {reviews} />);
 
     return (
         <>

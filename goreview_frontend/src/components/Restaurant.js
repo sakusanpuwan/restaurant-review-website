@@ -2,7 +2,7 @@ import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import RestaurantReviewPage from "./RestaurantReviewPage";
 
 
-const Restaurant = ({restaurant}) => {
+const Restaurant = ({restaurant,reviews}) => {
 
     const route = `/${restaurant.id}`
 

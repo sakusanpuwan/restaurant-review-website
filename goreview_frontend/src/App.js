@@ -61,7 +61,7 @@ function App() {
             <Route path={"/"} element={<RestaurantContainer restaurants={restaurants} reviews={reviews}  />} />
           
             {restaurants.map(restaurant => {
-              return <Route path={`/${restaurant.id}`} element={<RestaurantReviewPage restaurant={restaurant}/>}/>
+              return <Route path={`/${restaurant.id}`} element={<RestaurantReviewPage restaurant={restaurant} reviews = {reviews}/>}/>
             })}
               
           </Routes>
