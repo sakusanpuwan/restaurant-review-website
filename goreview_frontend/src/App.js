@@ -1,10 +1,11 @@
 import './App.css';
 import RestaurantContainer from './containers/RestaurantContainer';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <div className="App">
-        <h1>GOReview</h1>
+        <Navigation />
         <RestaurantContainer />
     </div>
   );
