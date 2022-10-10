@@ -27,6 +27,13 @@
 
 }
 
+#review-form{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    
+    }
+
 #restaurant-card{
     border: 2px solid black;
     text-align: center;

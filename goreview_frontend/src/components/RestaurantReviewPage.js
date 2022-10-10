@@ -11,7 +11,7 @@ const RestaurantReviewPage = ({restaurant,reviews}) => {
         <>
             <h3>Hey from RestaurantReviewPage</h3>
             <ReviewList restaurant={restaurant} reviews={filteredReviews}/>
-            {/* <ReviewForm restaurant={restaurant}/> */}
+            <ReviewForm restaurant={restaurant}/>
 
         </>
     )

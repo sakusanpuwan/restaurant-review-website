@@ -32,17 +32,17 @@ const ReviewForm = ({restaurant,onSubmit}) => {
     
 
     return(
-        <div>
+        <div id="review-form">
             <h3>Submit a Review</h3>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="date">Date of Visit:</label>
+                <label htmlFor="dateOfVisit">Date of Visit:</label>
                 <input
                     id="date"
                     name="date" 
-                    type="text" 
+                    type="date" 
                     placeholder="date"
                     onChange={handleChange}
-                    value={newReview.date}
+                    value={newReview.dateOfVisit}
                 />
                 <label htmlFor="rating">Rating:</label>
                 <input 
@@ -69,7 +69,7 @@ const ReviewForm = ({restaurant,onSubmit}) => {
                     type="text" 
                     placeholder="diets"
                     onChange={handleChange}
-                    value={newReview.diets}
+                    value={newReview.diet}
                 />
                 <label htmlFor="accessibility">Accessibility:</label>
                 <input 
