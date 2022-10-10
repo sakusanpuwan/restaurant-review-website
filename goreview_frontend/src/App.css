@@ -1,0 +1,13 @@
+#navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-links {
+    list-style-type: none;
+}
+
+.nav-link {
+    margin-right: 70px;
+    text-decoration: none;
+}
