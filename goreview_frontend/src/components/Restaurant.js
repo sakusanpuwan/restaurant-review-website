@@ -1,12 +1,17 @@
 import RestaurantReview from "./RestaurantReview"
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import RestaurantReviewPage from "./RestaurantReviewPage";
+
 
 const Restaurant = ({restaurant}) => {
 
-    const handleClick = () => {
-        return(
-            <RestaurantReview restaurant = {restaurant}/>
-        )
-    }
+    // const handleClick = () => {
+    //     return(
+    //         <RestaurantReview restaurant = {restaurant}/>
+    //     )
+    // }
+
+    const route = restaurant.id;
 
     return (
         <>
@@ -18,7 +23,13 @@ const Restaurant = ({restaurant}) => {
                 <li>Accessiblity: {restaurant.accessibility}</li>
                 <li>Rating: {restaurant.rating}</li>
             </ul>
-            <button onClick={handleClick}></button>
+            <BrowserRouter>
+            <button><Link to={route}>Submit review</Link></button>
+            <Routes>
+                <Route path={route} element={<RestaurantReviewPage restaurant={restaurant}/>}/>
+            </Routes>
+            </BrowserRouter>
+
         
         </>
 
