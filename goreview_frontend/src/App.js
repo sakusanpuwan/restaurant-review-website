@@ -1,9 +1,11 @@
 import './App.css';
+import RestaurantContainer from './containers/RestaurantContainer';
 
 function App() {
   return (
     <div className="App">
-        <h1>Hello World</h1>
+        <h1>GOReview</h1>
+        <RestaurantContainer />
     </div>
   );
 }
