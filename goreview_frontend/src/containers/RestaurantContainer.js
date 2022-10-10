@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import RestaurantList from "../components/RestaurantList";
 
 const RestaurantContainer = () => {
 
     const [restaurants, setRestaurants] = useState([]);
-    const [reviews, setRevies] = useState([]);
+    const [reviews, setReviews] = useState([]);
 
     const fetchRestaurantData = async () => {
         const response = await fetch('http://localhost:8080/restaurants');
