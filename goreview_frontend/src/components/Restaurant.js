@@ -1,17 +1,10 @@
-import RestaurantReview from "./RestaurantReview"
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import RestaurantReviewPage from "./RestaurantReviewPage";
 
 
 const Restaurant = ({restaurant}) => {
 
-    // const handleClick = () => {
-    //     return(
-    //         <RestaurantReview restaurant = {restaurant}/>
-    //     )
-    // }
-
-    const route = restaurant.id;
+    const route = `/${restaurant.name}`
 
     return (
         <>
