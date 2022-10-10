@@ -1,3 +1,4 @@
+import ReviewForm from "./ReviewForm";
 import ReviewList from "./ReviewList"
 
 const RestaurantReviewPage = ({restaurant}) => {
@@ -7,6 +8,9 @@ const RestaurantReviewPage = ({restaurant}) => {
     return (
         <>
             <h3>Hey from RestaurantReviewPage</h3>
+            <ReviewList restaurant={restaurant}/>
+            <ReviewForm restaurant={restaurant}/>
+
         </>
     )
 }

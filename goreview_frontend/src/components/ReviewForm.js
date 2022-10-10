@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ReviewForm = ({onSubmit}) => {
+const ReviewForm = ({restaurant,onSubmit}) => {
 
     const [newReview, setNewReview] = useState (
         {
