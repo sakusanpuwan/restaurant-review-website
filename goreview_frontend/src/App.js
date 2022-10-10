@@ -1,5 +1,4 @@
 import './App.css';
-import RestaurantContainer from './containers/RestaurantContainer';
 import Navigation from './components/Navigation';
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -58,7 +57,7 @@ function App() {
           <Navigation />
           
           <Routes>
-            <Route path={"/"} element={<RestaurantContainer restaurants={restaurants} reviews={reviews}  />} />
+            <Route path={"/"} element={<RestaurantList restaurants={restaurants} reviews={reviews}  />} />
           
             {restaurants.map(restaurant => {
               return <Route path={`/${restaurant.id}`} element={<RestaurantReviewPage restaurant={restaurant} reviews = {reviews}/>}/>
