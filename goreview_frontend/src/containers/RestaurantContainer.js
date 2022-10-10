@@ -10,6 +10,7 @@ const RestaurantContainer = () => {
         const response = await fetch('http://localhost:8080/restaurants');
         const restaurantData = await response.json();
         setRestaurants(restaurantData);
+       
     }
 
     const fetchReviewData = async () => {
@@ -36,8 +37,10 @@ const RestaurantContainer = () => {
             .then(fetchRestaurantData);
     }
 
-    useEffect(fetchRestaurantData, []);
-    useEffect(fetchReviewData, []);
+    useEffect(() => {
+        fetchRestaurantData();
+        fetchReviewData();
+    },[])
 
     return (
         <>
