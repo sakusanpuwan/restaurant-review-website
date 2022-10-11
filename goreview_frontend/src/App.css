@@ -65,6 +65,42 @@ h1 {
     text-decoration: none;
 }
 
+#nav-links-search-div a:hover {
+    background-color: #dfc986;
+}
+
+#nav-links-search-div li:hover {
+    cursor: pointer;
+    background-color: #dfc986;
+}
+
+#mobile-nav {
+    text-align: center;
+    display: none;
+}
+
+#mobile-nav ul {
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#mobile-nav li {
+    list-style: none;
+    text-align: center;
+}
+
+#mobile-nav a {
+    background-color: #FAC933;
+    padding: 8px;
+}
+
+#mobile-nav input {
+    width: 300px;
+    padding: 5px;
+}
+
 #restaurant-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -205,11 +241,10 @@ input[type=submit] {
 
     #nav-links-search-div {
         margin-top: -30px;
-    
     }
 
     header {
-        height: 100px;
+        height: 190px;
     }
 
     #navbar {
@@ -218,6 +253,10 @@ input[type=submit] {
 
     #nav-links-search-div {
         display: none;
+    }
+
+    #mobile-nav {
+        display: contents;
     }
 }
 
