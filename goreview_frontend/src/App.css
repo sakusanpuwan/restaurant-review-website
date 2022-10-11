@@ -24,10 +24,6 @@ h1 {
     font-size: 3rem;
 }
 
-#p.lowercase {
-    text-transform: lowercase;
-  }
-
 #nav-links {
     font-size: 1.2rem;
     list-style-type: none;
@@ -149,4 +145,23 @@ input[type=submit] {
     resize: vertical;
   }
 
+.footer_left li {
+    display: block;
+    text-align: left;
+    padding: 5px;
+}
+
+.footer_left img {
+    max-height: 20px
+}
+
+.footer_right li {
+    display: block;
+    text-align: right;
+    padding: 5px;
+}
+
+.footer_middle {
+    text-align: center;
+}
 
