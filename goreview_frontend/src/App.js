@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Restaurant from './components/Restaurant';
 import RestaurantList from "./components/RestaurantList";
 import RestaurantReviewPage from './components/RestaurantReviewPage';
+import Footer from './components/Footer';
 
 // const route = `/${restaurant.id}`
 
@@ -64,6 +65,8 @@ function App() {
             })}
               
           </Routes>
+
+          <Footer/>
         </BrowserRouter>
         
 
