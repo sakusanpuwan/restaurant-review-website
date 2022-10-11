@@ -43,6 +43,26 @@ public class DataLoader implements ApplicationRunner {
         restaurant3.setCuisine(Cuisine.ITALIAN);
         restaurantRepository.save(restaurant3);
 
+        Restaurant restaurant4 = new Restaurant("Zizzi","Manchester");
+        restaurant4.setCuisine(Cuisine.ITALIAN);
+        restaurantRepository.save(restaurant4);
+
+        Restaurant restaurant5 = new Restaurant("Nandos","London");
+        restaurant5.setCuisine(Cuisine.SPANISH);
+        restaurantRepository.save(restaurant5);
+
+        Restaurant restaurant6 = new Restaurant("TGI Fridays","Birmingham");
+        restaurant6.setCuisine(Cuisine.AMERICAN);
+        restaurantRepository.save(restaurant6);
+
+        Restaurant restaurant7 = new Restaurant("Frankie & Benny's","Edinburgh");
+        restaurant7.setCuisine(Cuisine.ITALIAN);
+        restaurantRepository.save(restaurant7);
+
+        Restaurant restaurant8 = new Restaurant("Wagamama","Cardiff");
+        restaurant8.setCuisine(Cuisine.JAPANESE);
+        restaurantRepository.save(restaurant8);
+
         Review review1 = new Review(user1,restaurant1,"21/1/2022", Rating.EXCELLENT);
         Collections.addAll(review1.getDiet(), Diet.DAIRY_FREE, Diet.HALAL);
         review1.setPricing(Pricing.£££);
@@ -79,6 +99,31 @@ public class DataLoader implements ApplicationRunner {
         Collections.addAll(review6.getDiet(), Diet.DAIRY_FREE, Diet.NUT_FREE);
         review6.setOptionalMessage("could have more dairy free options on the menu");
         reviewRepository.save(review6);
+
+        Review review7 = new Review(user2,restaurant4,"7/02/2022", Rating.GOOD);
+        Collections.addAll(review7.getDiet(), Diet.GLUTEN_FREE, Diet.FISH_FREE);
+        review7.setPricing(Pricing.£);
+        reviewRepository.save(review7);
+
+        Review review8 = new Review(user1,restaurant4,"15/11/2021", Rating.EXCELLENT);
+        Collections.addAll(review8.getDiet(), Diet.GLUTEN_FREE, Diet.FISH_FREE);
+        review8.setPricing(Pricing.£);
+        reviewRepository.save(review8);
+
+        Review review9 = new Review(user2,restaurant5,"5/12/2022", Rating.COMPLETELY_DISSATISFIED);
+        Collections.addAll(review9.getDiet(), Diet.GLUTEN_FREE, Diet.DAIRY_FREE);
+        review9.setPricing(Pricing.£);
+        reviewRepository.save(review9);
+
+        Review review10 = new Review(user2,restaurant6,"6/11/2021", Rating.GOOD);
+        Collections.addAll(review10.getDiet(), Diet.HALAL);
+        review10.setPricing(Pricing.£££);
+        reviewRepository.save(review10);
+
+        Review review11 = new Review(user2,restaurant6,"23/05/2022", Rating.AVERAGE);
+        Collections.addAll(review11.getDiet(), Diet.HALAL);
+        review11.setPricing(Pricing.£££);
+        reviewRepository.save(review11);
 
     }
 }
