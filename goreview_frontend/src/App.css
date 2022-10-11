@@ -3,6 +3,7 @@ body {
 }
 
 header {
+    z-index: 1;
     position: sticky;
     top: 0;
     background-color: #225b61;
@@ -51,7 +52,7 @@ h1 {
 
 #nav-links-search-div input {
     display: block;
-    width: 211px;
+    width: 220px;
     font-size: 1.1rem;
     padding: 3px;
     margin-bottom: 10px;
@@ -94,6 +95,7 @@ h1 {
 
 .restaurant-card:hover {
     position: relative;
+    z-index: 0;
     top: 2px;
     left: 2px;
 }
@@ -144,20 +146,13 @@ input[type=submit] {
     resize: vertical;
   }
 
-.footer_left li {
-    display: block;
-    text-align: left;
-    padding: 5px;
-}
+  #footer-div {
+    display: flex;
+    justify-content: space-around;
+  }
 
 .footer_left img {
     max-height: 20px
-}
-
-.footer_right li {
-    display: block;
-    text-align: right;
-    padding: 5px;
 }
 
 .footer_middle {
