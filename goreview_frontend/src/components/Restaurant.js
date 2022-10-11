@@ -11,14 +11,11 @@ const Restaurant = ({restaurant,reviews}) => {
         <>
         <Link to={route}> 
             <div className="restaurant-card">
-                <h2>{restaurant.name}</h2>
                 <img src={restaurant.imgURL}></img>
+                <h2>{restaurant.name}</h2>
 
-                    <p>Location: {restaurant.location}</p>
-                    <p>Cuisine: {restaurant.cuisine}</p>
-
-                <button>Read more</button>
-
+                <p>Location: {restaurant.location}</p>
+                <p>Cuisine: {restaurant.cuisine}</p>
             </div>
         </Link>
         </>
