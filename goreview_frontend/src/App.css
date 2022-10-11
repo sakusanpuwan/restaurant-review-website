@@ -139,12 +139,32 @@ input[type=submit] {
     padding-top: 30px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
+
+#footer-div li {
+    list-style: none;
+}
+
+#footer-div a {
+    text-decoration: none;
+    color: black;
+}
+
+#footer-div a:hover {
+    color: #666;
+}
+
+.footer_left li {
+    padding: 5px;
+}
+
+.footer_right li {
+    padding: 10px;
+}
 
 .footer_left img {
     max-height: 20px;
-    
-    
 }
 
 .footer_middle {
@@ -199,8 +219,6 @@ input[type=submit] {
     #nav-links-search-div {
         display: none;
     }
-    
-
 }
 
 @media screen and (max-width: 570px) {
@@ -210,10 +228,7 @@ input[type=submit] {
         gap: 30px;
     }
 
-
-
   #footer-div {
     font-size: 1rem;
-   
   }
 }
