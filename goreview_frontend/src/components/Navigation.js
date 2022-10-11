@@ -3,11 +3,11 @@ const Navigation = () => {
         <header>
             <nav id="navbar">
                 <h1>GOReview</h1>
-                <div>
+                <div id="nav-links-search-div">
                     <ul id="nav-links">
                       
-                    <li><a class="nav-link" href="#about-section">Register</a></li>
-                    <li><a class="nav-link" href="#projects">My Account</a></li>
+                    <li><a className="nav-link" href="#about-section">Register</a></li>
+                    <li><a className="nav-link" href="#projects">My Account</a></li>
                     </ul>
                     <input type="text" name="search" placeholder="Search"></input>
                 </div>

@@ -9,7 +9,7 @@ const Restaurant = ({restaurant,reviews}) => {
 
     return (
         <>
-        <div id="restaurant-card">
+        <div className="restaurant-card">
             <h2>{restaurant.name}</h2>
             <img src={restaurant.imgURL}></img>
 
