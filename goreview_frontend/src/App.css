@@ -149,10 +149,28 @@ input[type=submit] {
   #footer-div {
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-end;
+
+    
+  }
+
+  #footer-div a{
+    text-decoration: none;
+  }
+
+  .footer_left {
+    list-style-type: none;
+  }
+
+  .footer_right {
+    list-style: none;
   }
 
 .footer_left img {
-    max-height: 20px
+    max-height: 20px;
+    
+    
 }
 
 .footer_middle {
