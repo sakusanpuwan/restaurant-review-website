@@ -64,11 +64,12 @@ h1 {
 
 }
 
-#review-form {
+#review-form{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
-    
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    width: 600px;  
 }
 
 .restaurant-card {
@@ -84,6 +85,10 @@ h1 {
 
 #container {
     margin: 20px;
+}
+
+input[type=text]{
+    padding: 10px;
 }
 
 
