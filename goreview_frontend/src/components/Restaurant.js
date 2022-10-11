@@ -9,16 +9,18 @@ const Restaurant = ({restaurant,reviews}) => {
 
     return (
         <>
-        <div className="restaurant-card">
-            <h2>{restaurant.name}</h2>
-            <img src={restaurant.imgURL}></img>
+        <Link to={route}> 
+            <div className="restaurant-card">
+                <h2>{restaurant.name}</h2>
+                <img src={restaurant.imgURL}></img>
 
-                <p>Location: {restaurant.location}</p>
-                <p>Cuisine: {restaurant.cuisine}</p>
+                    <p>Location: {restaurant.location}</p>
+                    <p>Cuisine: {restaurant.cuisine}</p>
 
-            <Link to={route}> <button>Read more</button></Link>
+                <button>Read more</button>
 
-        </div>
+            </div>
+        </Link>
         </>
 
     )
