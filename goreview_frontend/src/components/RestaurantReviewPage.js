@@ -10,8 +10,13 @@ const RestaurantReviewPage = ({restaurant,reviews}) => {
     return (
         <>
             <h3>Hey from RestaurantReviewPage</h3>
+<<<<<<< Updated upstream
             <ReviewList restaurant={restaurant} reviews={filteredReviews}/>
             <ReviewForm restaurant={restaurant}/>
+=======
+            {/* <ReviewList restaurant={restaurant}/>
+            <ReviewForm/> */}
+>>>>>>> Stashed changes
 
         </>
     )
