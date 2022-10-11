@@ -145,7 +145,7 @@ input[type=submit] {
     resize: vertical;
   }
 
-.footer_left li a {
+.footer_left li {
     display: block;
     text-align: left;
     padding: 5px;
@@ -155,7 +155,7 @@ input[type=submit] {
     max-height: 20px
 }
 
-.footer_right li a{
+.footer_right li {
     display: block;
     text-align: right;
     padding: 5px;

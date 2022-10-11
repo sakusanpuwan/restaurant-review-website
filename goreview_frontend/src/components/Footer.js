@@ -11,12 +11,12 @@ const Footer = () => {
                         <li><a href="https://en-gb.facebook.com/">Facebook</a><img src="https://www.freepnglogos.com/uploads/facebook-icons/facebook-icon-transparent-background-3.png"></img></li>
                         <li><a href="https://www.instagram.com/">Instagram</a><img src="https://www.freepnglogos.com/uploads/instagram-icon-png/new-instagram-logo-png-6.png"></img></li>
                     </ul>
-                    <nav className="footer_right">
+                    <ul className="footer_right">
                         <li><a href="#">View all restaurants</a></li>
                         <li><a href="#">Add review</a></li>
                         <li><a href="#">Language</a></li>
                         <li><a href="https://github.com/joaopulsz/restaurant-review-website">About GOReview</a></li>
-                    </nav>
+                    </ul>
                 </div>
 
                 <div className="footer_middle">
