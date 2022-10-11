@@ -7,8 +7,8 @@ const ReviewForm = ({restaurant,onSubmit}) => {
             date: "",
             rating: "",
             pricing: "",
-            diets: 0,
-            accessibility: "" 
+            diet: [],
+            accessibility: [] 
         }
     );
 
@@ -26,15 +26,15 @@ const ReviewForm = ({restaurant,onSubmit}) => {
             date: "",
             rating: "",
             pricing: "",
-            diets: 0,
-            accessibility: ""
+            diet: [],
+            accessibility: []
         })};
     
 
     return(
-        <div id="review-form">
+        <div>
             <h3>Submit a Review</h3>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} id="review-form">
                 <label htmlFor="dateOfVisit">Date of Visit:</label>
                 <input
                     id="date"
@@ -44,98 +44,84 @@ const ReviewForm = ({restaurant,onSubmit}) => {
                     onChange={handleChange}
                     value={newReview.dateOfVisit}
                 />
-                <label htmlFor="rating">Rating:</label>
-                <input 
-                    id="rating"
-                    name="rating"
-                    type="text" 
-                    placeholder="rating"
-                    onChange={handleChange}
-                    value={newReview.rating}
-                />
-                <label htmlFor="pricing">Pricing:</label>
-                <input 
-                    id="pricing"
-                    name="pricing"
-                    type="text" 
-                    placeholder="pricing"
-                    onChange={handleChange}
-                    value={newReview.pricing}
-                />
+                
+                <label for="pricing">Pricing</label>
+                    <select name="pricing" id="pricing" onChange={handleChange} value={newReview.pricing}>
+                        <option value="£">£</option>
+                        <option value="££">££</option>
+                        <option value="£££">£££</option>
+                        <option value="££££">££££</option>
+                        <option value="£££££">£££££</option>
+                    </select>
 
-                <p>Pricing</p>
-                <div>
-                    <input type="radio" id="£" name="pricing" value="£"/>
-                    <label for="£">£</label>
-                </div>
-                <div>
-                    <input type="radio" id="££" name="pricing" value="££"/>
-                    <label for="£">££</label>
-                </div>
-                <div>
-                    <input type="radio" id="£££" name="pricing" value="£££"/>
-                    <label for="£">£££</label>
-                </div>
-                <div>
-                    <input type="radio" id="££££" name="pricing" value="££££"/>
-                    <label for="£">££££</label>
-                </div>
-                <div>
-                    <input type="radio" id="£££££" name="pricing" value="£££££"/>
-                    <label for="£">£££££</label>
-                </div>
+                    <label for="rating">Rating</label>
+                    <select name="rating" id="rating" onChange={handleChange} value={newReview.rating}>
+                        <option value="EXCELLENT">Excellent</option>
+                        <option value="GOOD">Good</option>
+                        <option value="AVERAGE">Average</option>
+                        <option value="NOT_SATISFIED">Not Satisfied</option>
+                        <option value="COMPLETELY_DISSATISFIED">Completely Dissatisfied</option>
+                    </select>
 
-                <label htmlFor="diets">Diets:</label>
-                <input 
-                    id="diets"
-                    name="diets"
-                    type="text" 
-                    placeholder="diets"
-                    onChange={handleChange}
-                    value={newReview.diet}
-                />
-                <label htmlFor="accessibility">Accessibility:</label>
-                <input 
-                    id="accessibility"
-                    name="accessibility"
-                    type="text" 
-                    placeholder="accessibility"
-                    onChange={handleChange}
-                    value={newReview.accessibility}
-                />
+                <label htmlFor="accessibility">Accessibility</label> 
+                <div>
+                    <input id="dog_friendly" type="checkbox" name="accessibility" onChange={handleChange} value={newReview.accessibility}/>
+                    <label for="dog_friendly">Dog Friendly</label>
+                </div>
+                <div>
+                    <input id="child_friendly" type="checkbox" name="accessibility" onChange={handleChange} value={newReview.accessibility}/>
+                    <label for="child_friendly">Child Friendly</label>
+                </div>
+                <div>
+                    <input id="accessible_menu" type="checkbox" name="accessibility" onChange={handleChange} value={newReview.accessibility}/>
+                    <label for="accessible_menu">Accessible Menu</label>
+                </div>
+                <div>
+                    <input id="wheelchair_access" type="checkbox" name="accessibility" onChange={handleChange} value={newReview.accessibility}/>
+                    <label for="wheelchair_access">Wheelchair Access</label>
+                </div>
+                <div>
+                    <input id="accessible_parking" type="checkbox" name="accessibility" onChange={handleChange} value={newReview.accessibility}/>
+                    <label for="accessible_parking">Accessible Parking</label>
+                </div>
+                <div>
+                    <input id="accessible_bathrooms" type="checkbox" name="accessibility" onChange={handleChange} value={newReview.accessibility}/>
+                    <label for="accessible_bathrooms">Accessible Bathrooms</label>
+                </div>
             
-                <label htmlFor="diets">Available Dietary Restrictions</label> 
+                <label htmlFor="diet">Available Dietary Restrictions:</label> 
                 <div>
-                    <input id="dairy_free" type="checkbox" name="diet[]" value="dairy_free"/>
+                    <input id="dairy_free" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
                     <label for="dairy_free">Dairy Free</label>
                 </div>
                 <div>
-                    <input id="nut_free" type="checkbox" name="diet[]" value="nut_free"/>
+                    <input id="nut_free" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
                     <label for="nut_free">Nut Free</label>
                 </div>
                 <div>
-                    <input id="fish_free" type="checkbox" name="diet[]" value="fish_free"/>
+                    <input id="fish_free" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
                     <label for="fish_free">Fish Free</label>
                 </div>
                 <div>
-                    <input id="gluten_free" type="checkbox" name="diet[]" value="gluten_free"/>
+                    <input id="gluten_free" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
                     <label for="gluten_free">Gluten Free</label>
                 </div>
                 <div>
-                    <input id="halal" type="checkbox" name="diet[]" value="halal"/>
+                    <input id="halal" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
                     <label for="halal">Halal</label>
                 </div>
                 <div>
-                    <input id="vegetarian" type="checkbox" name="diet[]" value="vegetarian"/>
+                    <input id="vegetarian" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
                     <label for="vegetarian">Vegetarian</label>
                 </div>
                 <div>
-                    <input id="vegan" type="checkbox" name="diet[]" value="vegan"/>
+                    <input id="vegan" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
                     <label for="vegan">Vegan</label>
                 </div>
 
                 <label htmlFor="optionalMessage">Write your review</label>
                 <input type="text" id="message" name="message" required minLength={15} maxLength={200} size={50}/>
+                
                 <input type="submit" name="submit" value="Submit Review"/>
             </form>
         </div>
