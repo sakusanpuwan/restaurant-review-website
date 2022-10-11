@@ -62,6 +62,29 @@ const ReviewForm = ({restaurant,onSubmit}) => {
                     onChange={handleChange}
                     value={newReview.pricing}
                 />
+
+                <p>Pricing</p>
+                <div>
+                    <input type="radio" id="£" name="pricing" value="£"/>
+                    <label for="£">£</label>
+                </div>
+                <div>
+                    <input type="radio" id="££" name="pricing" value="££"/>
+                    <label for="£">££</label>
+                </div>
+                <div>
+                    <input type="radio" id="£££" name="pricing" value="£££"/>
+                    <label for="£">£££</label>
+                </div>
+                <div>
+                    <input type="radio" id="££££" name="pricing" value="££££"/>
+                    <label for="£">££££</label>
+                </div>
+                <div>
+                    <input type="radio" id="£££££" name="pricing" value="£££££"/>
+                    <label for="£">£££££</label>
+                </div>
+
                 <label htmlFor="diets">Diets:</label>
                 <input 
                     id="diets"
@@ -80,7 +103,40 @@ const ReviewForm = ({restaurant,onSubmit}) => {
                     onChange={handleChange}
                     value={newReview.accessibility}
                 />
-                <input type="submit" value="Submit Review"/>
+            
+                <label htmlFor="diets">Available Dietary Restrictions</label> 
+                <div>
+                    <input id="dairy_free" type="checkbox" name="diet[]" value="dairy_free"/>
+                    <label for="dairy_free">Dairy Free</label>
+                </div>
+                <div>
+                    <input id="nut_free" type="checkbox" name="diet[]" value="nut_free"/>
+                    <label for="nut_free">Nut Free</label>
+                </div>
+                <div>
+                    <input id="fish_free" type="checkbox" name="diet[]" value="fish_free"/>
+                    <label for="fish_free">Fish Free</label>
+                </div>
+                <div>
+                    <input id="gluten_free" type="checkbox" name="diet[]" value="gluten_free"/>
+                    <label for="gluten_free">Gluten Free</label>
+                </div>
+                <div>
+                    <input id="halal" type="checkbox" name="diet[]" value="halal"/>
+                    <label for="halal">Halal</label>
+                </div>
+                <div>
+                    <input id="vegetarian" type="checkbox" name="diet[]" value="vegetarian"/>
+                    <label for="vegetarian">Vegetarian</label>
+                </div>
+                <div>
+                    <input id="vegan" type="checkbox" name="diet[]" value="vegan"/>
+                    <label for="vegan">Vegan</label>
+                </div>
+
+                <label htmlFor="optionalMessage">Write your review</label>
+                <input type="text" id="message" name="message" required minLength={15} maxLength={200} size={50}/>
+                <input type="submit" name="submit" value="Submit Review"/>
             </form>
         </div>
     );
