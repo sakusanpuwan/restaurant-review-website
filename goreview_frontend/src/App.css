@@ -68,7 +68,6 @@ h1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-
 }
 
 #restaurant-list a {
@@ -165,3 +164,33 @@ input[type=submit] {
     text-align: center;
 }
 
+
+
+
+
+
+@media screen and (max-width: 1150px) {
+    #restaurant-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #restaurant-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    #restaurant-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    
+}
