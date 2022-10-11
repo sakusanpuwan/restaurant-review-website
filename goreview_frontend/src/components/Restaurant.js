@@ -6,11 +6,12 @@ const Restaurant = ({restaurant,reviews}) => {
 
     const route = `/${restaurant.id}`
 
+
     return (
         <>
         <div id="restaurant-card">
             <h2>{restaurant.name}</h2>
-            <img></img>
+            <img src={restaurant.imgURL}></img>
 
                 <p>Location: {restaurant.location}</p>
                 <p>Cuisine: {restaurant.cuisine}</p>

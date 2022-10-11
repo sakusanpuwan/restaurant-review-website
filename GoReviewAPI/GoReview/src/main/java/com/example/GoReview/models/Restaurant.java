@@ -22,15 +22,19 @@ import java.util.List;
         @Column(name="cuisine")
         private Cuisine cuisine;
 
+        @Column(name = "imgURL")
+        private String imgURL;
+
         @OneToMany(mappedBy = "restaurant", cascade = CascadeType.REMOVE)
         @JsonIgnoreProperties({"restaurant"})
         List<Review> reviews;
 
 
-        public Restaurant( String name, String location) {
+        public Restaurant( String name, String location,String imgURL) {
             this.name = name;
             this.location = location;
             this.cuisine = null;
+            this.imgURL =  imgURL;
         }
 
         public Restaurant() {
@@ -74,6 +78,14 @@ import java.util.List;
 
         public void setCuisine(Cuisine cuisine) {
             this.cuisine = cuisine;
+        }
+
+        public String getImgURL() {
+            return imgURL;
+        }
+
+        public void setImgURL(String imgURL) {
+            this.imgURL = imgURL;
         }
     }
 

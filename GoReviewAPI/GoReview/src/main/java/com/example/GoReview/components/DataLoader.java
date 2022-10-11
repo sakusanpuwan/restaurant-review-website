@@ -31,35 +31,35 @@ public class DataLoader implements ApplicationRunner {
         User user2 = new User("john2", "John Two", "john2@mail.com");
         userRepository.save(user2);
 
-        Restaurant restaurant1 = new Restaurant("YO SUSHI","Glasgow");
+        Restaurant restaurant1 = new Restaurant("YO SUSHI","Glasgow","https://www.theglades.co.uk/wp-content/uploads/2020/02/yo_sushi.jpg");
         restaurant1.setCuisine(Cuisine.JAPANESE);
         restaurantRepository.save(restaurant1);
 
-        Restaurant restaurant2 = new Restaurant("Dominos","London");
+        Restaurant restaurant2 = new Restaurant("Dominos","London","https://www.dominos.co.uk/blog/wp-content/uploads/2020/06/Copy-of-Abundance.jpg");
         restaurant2.setCuisine(Cuisine.AMERICAN);
         restaurantRepository.save(restaurant2);
 
-        Restaurant restaurant3 = new Restaurant("Bella Italia","Leeds");
+        Restaurant restaurant3 = new Restaurant("Bella Italia","Leeds","https://images.squaremeal.co.uk/cloud/restaurants/10845/images/bella-italia-islington-pizza-and-pasta-dishes_17072019085533.jpg?w=928&h=522&fit=crop");
         restaurant3.setCuisine(Cuisine.ITALIAN);
         restaurantRepository.save(restaurant3);
 
-        Restaurant restaurant4 = new Restaurant("Zizzi","Manchester");
+        Restaurant restaurant4 = new Restaurant("Zizzi","Manchester","https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1200,h_630,d_uk:cuisines:italian-2.jpg/v1/uk/restaurants/122962.jpg");
         restaurant4.setCuisine(Cuisine.ITALIAN);
         restaurantRepository.save(restaurant4);
 
-        Restaurant restaurant5 = new Restaurant("Nandos","London");
+        Restaurant restaurant5 = new Restaurant("Nandos","London","https://www.nandos.com/wp-content/uploads/2022/04/food-banner.jpg");
         restaurant5.setCuisine(Cuisine.SPANISH);
         restaurantRepository.save(restaurant5);
 
-        Restaurant restaurant6 = new Restaurant("TGI Fridays","Birmingham");
+        Restaurant restaurant6 = new Restaurant("TGI Fridays","Birmingham","https://wembleypark.com/media/images/TGI_Fridays_Burgers_in_London_Des.2e16d0ba.fill-1200x630.jpg");
         restaurant6.setCuisine(Cuisine.AMERICAN);
         restaurantRepository.save(restaurant6);
 
-        Restaurant restaurant7 = new Restaurant("Frankie & Benny's","Edinburgh");
+        Restaurant restaurant7 = new Restaurant("Frankie & Benny's","Edinburgh","https://resizer.otstatic.com/v2/photos/wide-huge/1/25702863.jpg");
         restaurant7.setCuisine(Cuisine.ITALIAN);
         restaurantRepository.save(restaurant7);
 
-        Restaurant restaurant8 = new Restaurant("Wagamama","Cardiff");
+        Restaurant restaurant8 = new Restaurant("Wagamama","Cardiff","https://i2-prod.hulldailymail.co.uk/incoming/article6023821.ece/ALTERNATES/s615/0_image0jpeg.jpg");
         restaurant8.setCuisine(Cuisine.JAPANESE);
         restaurantRepository.save(restaurant8);
 
