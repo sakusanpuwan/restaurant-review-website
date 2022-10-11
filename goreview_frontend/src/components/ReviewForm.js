@@ -18,29 +18,23 @@ const ReviewForm = ({restaurant,onSubmit}) => {
         updatedNewReview[propertyName] = event.target.value;
         setNewReview(updatedNewReview);
     }
-
-    const handleBoxChange = (event) => {
-        const propertyName = event.target.checked;
-        const selectedItem = event.target.name;
-        if(checked) {
-            this.setState(prevState => ({
-                accessibility: [...]
-            }))
-        }
-    }
-    handleChange = (e) => {
+// 
+    const handleBoxChange = (e) => {
         const checked = e.target.checked;
-        const selectedColor = e.target.name;
+        console.log(e.target);
+        const selectedAccessibility = e.target.name;
         if(checked) {
-          this.setState(prevState => ({
-            colors: [...prevState.colors, selectedColor]
-          }));
-        } else {
-          this.setState(prevState => ({
-            colors: prevState.colors.filter(color => color!==selectedColor)
-          }));
-        }
-      }
+            selectedAccessibility[checked] = e.target.value;
+            setNewReview(selectedAccessibility);
+        //     this.setState(prevState => ({
+        //         accessibilities: [...prevState.accessibilities, selectedAccessibility]
+        //     }));
+        // } else {
+        //     this.setState(prevState => ({
+        //       accessibilities: prevState.accessibility.filter(accessibility => accessibility!==selectedAccessibility)
+        //     }));
+        //   }
+        }}
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -52,7 +46,6 @@ const ReviewForm = ({restaurant,onSubmit}) => {
             diet: [],
             accessibility: []
         })};
-    
 
     return(
         <div>
@@ -88,28 +81,28 @@ const ReviewForm = ({restaurant,onSubmit}) => {
                     </select>
 
                 <label htmlFor="accessibility">Accessibility</label> 
-                <div>
-                    <input multiple id="dog_friendly" type="checkbox" name="accessibility" onChange={handleChange} value={newReview.accessibility}/>
+                <div class="box">
+                    <input id="dog_friendly" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.selectedAccessibility}/>
                     <label for="dog_friendly">Dog Friendly</label>
                 </div>
-                <div>
-                    <input multiple id="child_friendly" type="checkbox" name="accessibility" onChange={handleChange} value={newReview.accessibility}/>
+                <div class="box">
+                    <input id="child_friendly" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
                     <label for="child_friendly">Child Friendly</label>
                 </div>
-                <div>
-                    <input multiple id="accessible_menu" type="checkbox" name="accessibility" onChange={handleChange} value={newReview.accessibility}/>
+                <div class="box">
+                    <input id="accessible_menu" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
                     <label for="accessible_menu">Accessible Menu</label>
                 </div>
-                <div>
-                    <input multiple id="wheelchair_access" type="checkbox" name="accessibility" onChange={handleChange} value={newReview.accessibility}/>
+                <div class="box">
+                    <input id="wheelchair_access" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
                     <label for="wheelchair_access">Wheelchair Access</label>
                 </div>
-                <div>
-                    <input multiple id="accessible_parking" type="checkbox" name="accessibility" onChange={handleChange} value={newReview.accessibility}/>
+                <div class="box">
+                    <input id="accessible_parking" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
                     <label for="accessible_parking">Accessible Parking</label>
                 </div>
-                <div>
-                    <input multiple id="accessible_bathrooms" type="checkbox" name="accessibility" onChange={handleChange} value={newReview.accessibility}/>
+                <div class="box">
+                    <input id="accessible_bathrooms" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
                     <label for="accessible_bathrooms">Accessible Bathrooms</label>
                 </div>
             
