@@ -1,5 +1,5 @@
 body {
-    background-color: #fac83317;
+    background-color: #fac83309;
 }
 
 header {
@@ -9,20 +9,20 @@ header {
     background-color: #225b61;
     display: flex;
     justify-content: center;
+    border-bottom: 2px solid black;
 }
 
 #navbar {
     width: 90%;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 20px;
-    border-bottom: 2px solid black;
 }
 
 h1 {
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 #nav-links {
@@ -31,7 +31,7 @@ h1 {
 }
 
 #nav-links-search-div {
-    margin-top: -30px;
+    margin-top: -35px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -43,7 +43,7 @@ h1 {
 }
 
 #nav-links-search-div li {
-    padding: 10px;
+    padding: 5px;
     background-color: #FAC933;
     width: 200px;
     margin: 20px 0px;
@@ -52,10 +52,10 @@ h1 {
 
 #nav-links-search-div input {
     display: block;
-    width: 220px;
+    width: 210px;
     font-size: 1.1rem;
     padding: 3px;
-    margin-bottom: 10px;
+    margin-top: -20px;
 }
 
 .nav-link {
@@ -65,9 +65,45 @@ h1 {
     text-decoration: none;
 }
 
+#nav-links-search-div a:hover {
+    background-color: #dfc986;
+}
+
+#nav-links-search-div li:hover {
+    cursor: pointer;
+    background-color: #dfc986;
+}
+
+#mobile-nav {
+    text-align: center;
+    display: none;
+}
+
+#mobile-nav ul {
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#mobile-nav li {
+    list-style: none;
+    text-align: center;
+}
+
+#mobile-nav a {
+    background-color: #FAC933;
+    padding: 8px;
+}
+
+#mobile-nav input {
+    width: 300px;
+    padding: 5px;
+}
+
 #restaurant-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
 }
 
@@ -85,7 +121,7 @@ h1 {
 }
 
 .restaurant-card {
-    background-color: #225b6128;
+    background-color: #225b614d;
     border: 1px solid black;
     text-align: center;
     border-radius: 8px;
@@ -94,6 +130,7 @@ h1 {
 }
 
 .restaurant-card:hover {
+    background-color: #225b611f;
     position: relative;
     z-index: 0;
     top: 2px;
@@ -103,19 +140,6 @@ h1 {
 .restaurant-card img {
     width: 250px;
     height: 150px;
-}
-
-.restaurant-card button {
-    font-size: 1.1em;
-    color: #225b61;
-    background-color: #FAC933;
-    padding: 6px;
-    box-shadow: none;
-    border: 1px solid black;
-}
-
-.restaurant-card button:hover {
-    cursor: pointer;
 }
 
 #container {
@@ -162,12 +186,36 @@ label {
  }
 
   #footer-div {
+    font-size: 1.1rem;
+    padding-top: 30px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
 
+#footer-div li {
+    list-style: none;
+}
+
+#footer-div a {
+    text-decoration: none;
+    color: black;
+}
+
+#footer-div a:hover {
+    color: #666;
+}
+
+.footer_left li {
+    padding: 5px;
+}
+
+.footer_right li {
+    padding: 10px;
+}
+
 .footer_left img {
-    max-height: 20px
+    max-height: 20px;
 }
 
 .footer_middle {
@@ -177,7 +225,13 @@ label {
 
 
 
-
+@media screen and (max-width: 1410px) {
+    #restaurant-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+}
 
 @media screen and (max-width: 1150px) {
     #restaurant-list {
@@ -195,6 +249,32 @@ label {
     }
 }
 
+@media screen and (max-width: 702px) {
+    #navbar {
+        flex-direction: column;
+    }
+
+    #nav-links-search-div {
+        margin-top: -30px;
+    }
+
+    header {
+        height: 190px;
+    }
+
+    #navbar {
+        margin-top: -40px;
+    }
+
+    #nav-links-search-div {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: contents;
+    }
+}
+
 @media screen and (max-width: 570px) {
     #restaurant-list {
         display: grid;
@@ -202,5 +282,7 @@ label {
         gap: 30px;
     }
 
-    
+  #footer-div {
+    font-size: 1rem;
+  }
 }
