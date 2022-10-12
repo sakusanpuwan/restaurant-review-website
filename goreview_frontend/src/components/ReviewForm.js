@@ -12,29 +12,30 @@ const ReviewForm = ({restaurant,onSubmit}) => {
         }
     );
 
+
     const handleChange = (event) =>{
         const propertyName = event.target.name;
         const updatedNewReview = {...newReview};
         updatedNewReview[propertyName] = event.target.value;
         setNewReview(updatedNewReview);
     }
-// 
+
     const handleBoxChange = (e) => {
-        const checked = e.target.checked;
-        console.log(e.target);
-        const selectedAccessibility = e.target.name;
-        if(checked) {
-            selectedAccessibility[checked] = e.target.value;
-            setNewReview(selectedAccessibility);
-        //     this.setState(prevState => ({
-        //         accessibilities: [...prevState.accessibilities, selectedAccessibility]
-        //     }));
-        // } else {
-        //     this.setState(prevState => ({
-        //       accessibilities: prevState.accessibility.filter(accessibility => accessibility!==selectedAccessibility)
-        //     }));
-        //   }
-        }}
+        const itemArray = newReview[e.target.name];
+        const reviewCopy = {...newReview};
+        if (e.target.checked){
+            const updatedArray = [...itemArray, e.target.id];
+            reviewCopy[e.target.name]=updatedArray;
+            setNewReview(reviewCopy);
+        }
+        else {
+            const startIndex = itemArray.indexOf(e.target.id)
+            const updatedArray = [...itemArray]
+            updatedArray.splice(startIndex, 1)
+            reviewCopy[e.target.name]=updatedArray;
+            setNewReview(reviewCopy);
+        }
+    }
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -80,9 +81,17 @@ const ReviewForm = ({restaurant,onSubmit}) => {
                         <option value="COMPLETELY_DISSATISFIED">Completely Dissatisfied</option>
                     </select>
 
-                <label htmlFor="accessibility">Accessibility</label> 
+
+
+                <label for="accessibility">Accessibility</label> 
+
+                {/* <label for="dog_friendly">
+                    <input type = "checkbox" checked={checked} onChange={handleBoxChange} name="accessibility" value="dog_friendly" id="dog_friendly"/>
+                    Dog Friendly
+                </label> */}
+                {/* <p> Is "it" checked? {checked.toString()</p> */}
                 <div class="box">
-                    <input id="dog_friendly" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.selectedAccessibility}/>
+                    <input id="dog_friendly" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
                     <label for="dog_friendly">Dog Friendly</label>
                 </div>
                 <div class="box">
@@ -105,34 +114,34 @@ const ReviewForm = ({restaurant,onSubmit}) => {
                     <input id="accessible_bathrooms" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
                     <label for="accessible_bathrooms">Accessible Bathrooms</label>
                 </div>
-            
+
                 <label htmlFor="diet">Available Dietary Restrictions:</label> 
                 <div>
-                    <input id="dairy_free" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
+                    <input id="dairy_free" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
                     <label for="dairy_free">Dairy Free</label>
                 </div>
                 <div>
-                    <input id="nut_free" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
+                    <input id="nut_free" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
                     <label for="nut_free">Nut Free</label>
                 </div>
                 <div>
-                    <input id="fish_free" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
+                    <input id="fish_free" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
                     <label for="fish_free">Fish Free</label>
                 </div>
                 <div>
-                    <input id="gluten_free" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
+                    <input id="gluten_free" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
                     <label for="gluten_free">Gluten Free</label>
                 </div>
                 <div>
-                    <input id="halal" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
+                    <input id="halal" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
                     <label for="halal">Halal</label>
                 </div>
                 <div>
-                    <input id="vegetarian" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
+                    <input id="vegetarian" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
                     <label for="vegetarian">Vegetarian</label>
                 </div>
                 <div>
-                    <input id="vegan" type="checkbox" name="diet" onChange={handleChange} value={newReview.diet}/>
+                    <input id="vegan" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
                     <label for="vegan">Vegan</label>
                 </div>
 
