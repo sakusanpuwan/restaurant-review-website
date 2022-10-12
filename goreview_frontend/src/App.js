@@ -28,6 +28,8 @@ function App() {
         setReviews(reviewData);
     }
 
+
+
     const submitNewReview = (newReview) => {
         fetch("http://localhost:8080/reviews", {
             method: "POST",
