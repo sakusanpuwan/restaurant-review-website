@@ -101,6 +101,10 @@ h1 {
     padding: 5px;
 }
 
+.register {
+    text-decoration: none;
+}
+
 #restaurant-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -307,6 +311,7 @@ input[type=submit] {
     #reviews-container {
         grid-template-columns: 1fr;
     }
+
 }
 
 @media screen and (max-width: 570px) {
