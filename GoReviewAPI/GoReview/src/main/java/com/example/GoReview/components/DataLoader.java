@@ -63,6 +63,15 @@ public class DataLoader implements ApplicationRunner {
         restaurant8.setCuisine(Cuisine.JAPANESE);
         restaurantRepository.save(restaurant8);
 
+        Restaurant restaurant9 = new Restaurant("Pizza Hut", "London", "https://www.greenqueen.com.hk/wp-content/uploads/2022/06/pizza-hut-green-queen.jpg");
+        restaurant9.setCuisine(Cuisine.AMERICAN);
+        restaurantRepository.save(restaurant9);
+
+        Restaurant restaurant10 = new Restaurant("Whetherspoons", "Oxford", "https://metro.co.uk/wp-content/uploads/2021/07/SEC_86322035.jpg?quality=90&strip=all&zoom=1&resize=644%2C338");
+        restaurant10.setCuisine(Cuisine.BRITISH);
+        restaurantRepository.save(restaurant10);
+
+
         Review review1 = new Review(user1,restaurant1,"21/1/2022", Rating.EXCELLENT);
         Collections.addAll(review1.getDiet(), Diet.DAIRY_FREE, Diet.HALAL);
         review1.setPricing(Pricing.£££);
