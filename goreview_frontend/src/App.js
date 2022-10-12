@@ -1,6 +1,6 @@
 import './App.css';
 import Navigation from './components/Navigation';
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Link, Routes, Route, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Restaurant from './components/Restaurant';
 import RestaurantList from "./components/RestaurantList";
@@ -52,20 +52,34 @@ function App() {
         fetchRestaurantData();
         fetchReviewData();
     },[])
+
+
+    const italianRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "ITALIAN"));
+    const americanRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "AMERICAN"));
+    const japaneseRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "JAPANESE"));
+    const spanishRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "SPANISH"));
+  
+
   
   return (
     <div className="App">
+
+      
         
         <BrowserRouter>
           <Navigation />
           
           <Routes>
             <Route path={"/"} element={<RestaurantList restaurants={restaurants} reviews={reviews}  />} />
+            <Route path={'/italian'} element={<RestaurantList restaurants={italianRestaurants} reviews={reviews}  />} />
+            <Route path={'/american'} element={<RestaurantList restaurants={americanRestaurants} reviews={reviews}  />} />
+            <Route path={'/japanese'} element={<RestaurantList restaurants={japaneseRestaurants} reviews={reviews}  />} />
+            <Route path={'/spanish'} element={<RestaurantList restaurants={spanishRestaurants} reviews={reviews}  />} />
           
             {restaurants.map(restaurant => {
               return <Route path={`/${restaurant.id}`} element={<RestaurantReviewPage restaurant={restaurant} reviews = {reviews}/>}/>
             })}
-              
+
           </Routes>
 
           <Footer/>
