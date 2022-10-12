@@ -9,7 +9,6 @@ const Navigation = () => {
                     <ul id="nav-links">
                         <Link to={`/new-user`}><li><a className="nav-link" href="/new-user">Register</a></li></Link>
                         <li><a className="nav-link" href="#projects">My Account</a></li>
-                        <Link to={'/users'}><li><a>All users</a></li></Link>
                     </ul>
                     <input type="text" name="search" placeholder="Search"></input>
                 </div>
