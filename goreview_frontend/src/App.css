@@ -1,4 +1,5 @@
 body {
+    font-family: 'Mukta', sans-serif;
     background-color: #fac83309;
 }
 
@@ -51,7 +52,7 @@ h1 {
     padding: 5px;
     background-color: #FAC933;
     width: 200px;
-    margin: 20px 0px;
+    margin: 10px 0px;
     text-align: center;
 }
 
@@ -124,8 +125,8 @@ h1 {
 }
 
 .restaurant-card {
-    background-color: #225b614d;
-    border: 2px solid #FAC933;
+    background-color: #225b6116;
+    border: 1px solid #FAC933;
     text-align: center;
     border-radius: 8px;
     padding-bottom: 10px;
