@@ -39,13 +39,16 @@ function App() {
 
     const postReview = (newReview) => {
 
-        fetch("http://localhost:8080/reviews", {
+    const postReview = (newReview) => {
+        fetch(`http://localhost:8080/reviews?username=${newReview.username}&restaurantId=${newReview.restaurantId}`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newReview)
         })
-        .then(response => response.json())
-        .then(savedReview => setReviews([...reviews, savedReview]))
+
+          .then(response => response.json())
+          // .then(savedReview => setReviews([...reviews, savedReview])) // "review with id 13 created by alice1"
+          .then(fetchReviewData())
     }
 
     const deleteReview = (id) => {
@@ -87,7 +90,8 @@ function App() {
             <RestaurantList restaurants={restaurants} reviews={reviews}  />} />
           
             {restaurants.map(restaurant => {
-              return <Route path={`/${restaurant.id}`} element={<RestaurantReviewPage restaurant={restaurant} reviews={reviews}/>}/>
+
+              return <Route path={`/${restaurant.id}`} element={<RestaurantReviewPage restaurant={restaurant} postReview={postReview} reviews = {reviews}/>}/>
             })}
 
 
@@ -101,6 +105,6 @@ function App() {
         </BrowserRouter>
     </div>
   )
-}
+}}
 
 export default App;
