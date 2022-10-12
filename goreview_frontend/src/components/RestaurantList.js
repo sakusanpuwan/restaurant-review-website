@@ -16,6 +16,7 @@ const RestaurantList = ({restaurants, reviews}) => {
                 <Link to={`/american`}><button className="filter-btn">AMERICAN</button></Link>
                 <Link to={`/japanese`}><button className="filter-btn">JAPANESE</button></Link>
                 <Link to={`/spanish`}><button className="filter-btn">SPANISH</button></Link>
+                <Link to={`/british`}><button className="filter-btn">BRITISH</button></Link>
             </div>
 
             <div id="restaurant-list">

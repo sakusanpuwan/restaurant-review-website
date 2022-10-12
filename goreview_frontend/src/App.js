@@ -38,8 +38,6 @@ function App() {
     }
 
     const postReview = (newReview) => {
-
-    const postReview = (newReview) => {
         fetch(`http://localhost:8080/reviews?username=${newReview.username}&restaurantId=${newReview.restaurantId}`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
@@ -69,6 +67,7 @@ function App() {
     const americanRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "AMERICAN"));
     const japaneseRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "JAPANESE"));
     const spanishRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "SPANISH"));
+    const britishRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "BRITISH"));
 
     const postUser = async(newUser) => {
       await fetch("http://localhost:8080/users",{
@@ -78,6 +77,7 @@ function App() {
       })
 
     }
+
   
   return (
     <div className="App">
@@ -86,8 +86,12 @@ function App() {
           <Navigation />
           
           <Routes>
-            <Route path={"/"} element={
-            <RestaurantList restaurants={restaurants} reviews={reviews}  />} />
+          <Route path={"/"} element={<RestaurantList restaurants={restaurants} reviews={reviews}  />} />
+            <Route path={"/italian"} element={<RestaurantList restaurants={italianRestaurants} reviews={reviews}  />} />
+            <Route path={"/american"} element={<RestaurantList restaurants={americanRestaurants} reviews={reviews}  />} />
+            <Route path={"/japanese"} element={<RestaurantList restaurants={japaneseRestaurants} reviews={reviews}  />} />
+            <Route path={"/spanish"} element={<RestaurantList restaurants={spanishRestaurants} reviews={reviews}  />} />
+            <Route path={"/british"} element={<RestaurantList restaurants={britishRestaurants} reviews={reviews}  />} />
           
             {restaurants.map(restaurant => {
 
@@ -105,6 +109,6 @@ function App() {
         </BrowserRouter>
     </div>
   )
-}}
+}
 
 export default App;

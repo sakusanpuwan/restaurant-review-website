@@ -38,6 +38,7 @@ h1 {
 }
 
 #nav-links-search-div a {
+    color: #225b61;
     width: 100%;
     background-color: #FAC933;
 }
@@ -92,6 +93,8 @@ h1 {
 }
 
 #mobile-nav a {
+    margin: 0px 5px;
+    color: #225b61;
     background-color: #FAC933;
     padding: 8px;
 }
@@ -263,7 +266,7 @@ input[type=submit] {
     }
 
     #reviews-container {
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
