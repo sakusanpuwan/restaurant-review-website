@@ -68,6 +68,7 @@ function App() {
     const americanRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "AMERICAN"));
     const japaneseRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "JAPANESE"));
     const spanishRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "SPANISH"));
+    const britishRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "BRITISH"));
 
     const postUser = async(newUser) => {
       await fetch("http://localhost:8080/users",{
@@ -96,7 +97,7 @@ function App() {
             <Route path={'/american'} element={<RestaurantList restaurants={americanRestaurants} reviews={reviews}  />} />
             <Route path={'/japanese'} element={<RestaurantList restaurants={japaneseRestaurants} reviews={reviews}  />} />
             <Route path={'/spanish'} element={<RestaurantList restaurants={spanishRestaurants} reviews={reviews}  />} />
-          
+            <Route path={'/british'} element={<RestaurantList restaurants={britishRestaurants} reviews={reviews}  />} />
             {restaurants.map(restaurant => {
               return <Route path={`/${restaurant.id}`} element={<RestaurantReviewPage restaurant={restaurant} reviews = {reviews}/>}/>
             })}

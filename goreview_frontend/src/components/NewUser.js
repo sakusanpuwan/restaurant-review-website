@@ -24,6 +24,11 @@ const NewUser = ({postUser}) => {
     const handleFormSubmit = (event) => {
         event.preventDefault()
         postUser(user)
+        setUser({
+            username: "",
+            fullname:"",
+            email:""
+        })
         
     }
     return(
