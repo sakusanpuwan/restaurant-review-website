@@ -1,14 +1,15 @@
 import { useState } from "react";
 
-const ReviewForm = ({restaurant,onSubmit}) => {
+const ReviewForm = ({restaurants, reviews, postReview}) => {
 
     const [newReview, setNewReview] = useState (
         {
-            date: "",
-            rating: "",
-            pricing: "",
+            accessibility: [],
+            dateOfVisit: "",
             diet: [],
-            accessibility: [] 
+            optionalMessage: "",
+            pricing: null,
+            rating: null,
         }
     );
 
@@ -22,31 +23,25 @@ const ReviewForm = ({restaurant,onSubmit}) => {
 
     const handleBoxChange = (e) => {
         const itemArray = newReview[e.target.name];
-        const reviewCopy = {...newReview};
+        const updatedNewReview = {...newReview};
         if (e.target.checked){
             const updatedArray = [...itemArray, e.target.id];
-            reviewCopy[e.target.name]=updatedArray;
-            setNewReview(reviewCopy);
+            updatedNewReview[e.target.name]=updatedArray;
+            setNewReview(updatedNewReview);
         }
         else {
             const startIndex = itemArray.indexOf(e.target.id)
             const updatedArray = [...itemArray]
             updatedArray.splice(startIndex, 1)
-            reviewCopy[e.target.name]=updatedArray;
-            setNewReview(reviewCopy);
+            updatedNewReview[e.target.name]=updatedArray;
+            setNewReview(updatedNewReview);
         }
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onSubmit(newReview);
-        setNewReview({
-            date: "",
-            rating: "",
-            pricing: "",
-            diet: [],
-            accessibility: []
-        })};
+        postReview(newReview)
+    };
 
     return(
         <div>
@@ -55,10 +50,10 @@ const ReviewForm = ({restaurant,onSubmit}) => {
                 
                 <label htmlFor="dateOfVisit">Date of Visit:</label>
                 <input
-                    id="date"
-                    name="date" 
-                    type="date" 
-                    placeholder="date"
+                    id="dateOfVisit"
+                    name="dateOfVisit" 
+                    type="dateOfVisit" 
+                    placeholder="Date Of Visit"
                     onChange={handleChange}
                     value={newReview.dateOfVisit}
                 />
@@ -146,7 +141,7 @@ const ReviewForm = ({restaurant,onSubmit}) => {
                 </div>
 
                 <label htmlFor="optionalMessage">Write your review</label>
-                <input type="text" id="message" name="message" required minLength={15} maxLength={200} size={50}/>
+                <input type="text" id="optionalMessage" name="optionalMessage" onChange={handleChange} value={newReview.optionalMessage}required minLength={1} maxLength={200} size={50}/>
                 
                 <input type="submit" name="submit" value="Submit Review"/>
             </form>

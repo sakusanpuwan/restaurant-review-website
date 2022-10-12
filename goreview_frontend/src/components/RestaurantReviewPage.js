@@ -1,5 +1,6 @@
 import ReviewForm from "./ReviewForm";
 import ReviewList from "./ReviewList"
+import { useEffect, useState } from "react";
 
 const RestaurantReviewPage = ({restaurant,reviews}) => {
 
@@ -10,8 +11,9 @@ const RestaurantReviewPage = ({restaurant,reviews}) => {
         <div id="review-page">
             <h2>{restaurant.name}</h2>
             <ReviewList restaurant={restaurant} reviews={filteredReviews}/>
-            <ReviewForm restaurant={restaurant}/>
-
+            <ReviewForm 
+            restaurant={restaurant}
+            postReview={postReview}/>
         </div>
     )
 }
