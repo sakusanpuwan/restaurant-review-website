@@ -1,6 +1,6 @@
 import './App.css';
 import Navigation from './components/Navigation';
-import { BrowserRouter, Link, Routes, Route, useSearchParams } from "react-router-dom";
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Restaurant from './components/Restaurant';
 import RestaurantList from "./components/RestaurantList";
@@ -37,17 +37,18 @@ function App() {
       setUsers(userData);
     }
 
+    const postReview = (newReview) => {
 
-
-    const submitNewReview = (newReview) => {
-        fetch("http://localhost:8080/reviews", {
+    const postReview = (newReview) => {
+        fetch(`http://localhost:8080/reviews?username=${newReview.username}&restaurantId=${newReview.restaurantId}`, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newReview)
         })
-            .then(fetchRestaurantData);
+
+          .then(response => response.json())
+          // .then(savedReview => setReviews([...reviews, savedReview])) // "review with id 13 created by alice1"
+          .then(fetchReviewData())
     }
 
     const deleteReview = (id) => {
@@ -85,8 +86,6 @@ function App() {
   
   return (
     <div className="App">
-
-      
         
         <BrowserRouter>
           <Navigation />
@@ -97,20 +96,23 @@ function App() {
             <Route path={'/american'} element={<RestaurantList restaurants={americanRestaurants} reviews={reviews}  />} />
             <Route path={'/japanese'} element={<RestaurantList restaurants={japaneseRestaurants} reviews={reviews}  />} />
             <Route path={'/spanish'} element={<RestaurantList restaurants={spanishRestaurants} reviews={reviews}  />} />
-            <Route path={'/british'} element={<RestaurantList restaurants={britishRestaurants} reviews={reviews}  />} />
+          
             {restaurants.map(restaurant => {
-              return <Route path={`/${restaurant.id}`} element={<RestaurantReviewPage restaurant={restaurant} reviews = {reviews}/>}/>
+
+              return <Route path={`/${restaurant.id}`} element={<RestaurantReviewPage restaurant={restaurant} postReview={postReview} reviews = {reviews}/>}/>
             })}
+
 
             <Route path={'/new-user'} element={<NewUser postUser={postUser}/>}/>
 
             <Route path={'/users'} element={<UserList users={users}/>}/>
+
           </Routes>
 
           <Footer/>
         </BrowserRouter>
     </div>
   )
-}
+}}
 
 export default App;

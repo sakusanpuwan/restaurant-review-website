@@ -52,7 +52,7 @@ h1 {
 
 #nav-links-search-div input {
     display: block;
-    width: 210px;
+    width: 200px;
     font-size: 1.1rem;
     padding: 3px;
     margin-top: -20px;
@@ -101,6 +101,10 @@ h1 {
     padding: 5px;
 }
 
+.register {
+    text-decoration: none;
+}
+
 #restaurant-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -144,6 +148,7 @@ h1 {
 }
 
 #filters-container {
+    width: 100%;
     margin: 30px;
 }
 
@@ -175,7 +180,7 @@ input[type=submit] {
     float: right;
 }
 
-form {
+#review-form {
     color: white;
     box-sizing: border-box;
     border-radius: 2rem;
@@ -183,15 +188,14 @@ form {
     border: 4px solid #FAC933;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10rem;
 }
 
-label {
+#review-form label {
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
 
-input[type=text], select, textarea{
+#review-form input[type=text], select, textarea{
     width: 100%;
     height: 100%;
     padding: 12px;
@@ -199,10 +203,6 @@ input[type=text], select, textarea{
     border-radius: 4px;
     box-sizing: border-box;
     resize: vertical;
-}
-
-.box{
-    display: flex;
 }
 
 #footer-div {
@@ -252,7 +252,6 @@ input[type=text], select, textarea{
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 50px;
 }
-
 
 
 
@@ -312,6 +311,7 @@ input[type=text], select, textarea{
     #reviews-container {
         grid-template-columns: 1fr;
     }
+
 }
 
 @media screen and (max-width: 570px) {
