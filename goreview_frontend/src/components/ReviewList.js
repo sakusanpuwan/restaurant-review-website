@@ -8,7 +8,9 @@ const ReviewList = ({reviews,restaurant}) => {
     return (
         <>
             <h3>Reviews for: {restaurant.name} {restaurant.location}</h3>
-            {reviewComponents}
+            <div id="reviews-container">
+                {reviewComponents}
+            </div>
         </>
     )
 }
