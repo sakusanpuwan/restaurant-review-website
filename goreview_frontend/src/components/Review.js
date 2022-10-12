@@ -8,7 +8,6 @@ const Review = ({review}) => {
             <p>Diets: {review.diet}</p>
             <p>Accessibility: {review.accessibility}</p>
             <p>Review: {review.optionalMessage}</p>
-            <hr />
         </>
     )
 }
