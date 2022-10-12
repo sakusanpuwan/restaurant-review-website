@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 
-const Restaurant = ({restaurant,reviews}) => {
+const Restaurant = ({restaurant, reviews}) => {
 
     const route = `/${restaurant.id}`
     const [rating, setRating] = useState("");

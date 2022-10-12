@@ -7,7 +7,7 @@ const RestaurantReviewPage = ({postReview,restaurant,reviews}) => {
     
     return (
         <div id="review-page">
-            <h2>{restaurant.name}</h2>
+            <h2>{restaurant.name} {restaurant.location}</h2>
             <ReviewList 
                 restaurant={restaurant} 
                 reviews={filteredReviews}/>
