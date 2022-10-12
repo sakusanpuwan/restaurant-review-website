@@ -17,7 +17,7 @@ const Footer = () => {
                 <div>
                     <ul className="footer_right">
                         <li><a href="/">View all restaurants</a></li>
-                        <Link to={'/users'}><li><a>All users</a></li></Link>
+                        <Link to={'/users'}><li><a>View all users</a></li></Link>
                         <li><a href="#">Select language</a></li>
                         <li><a href="#">Accessibility</a></li>
                         <li><a href="https://github.com/joaopulsz/restaurant-review-website">About GOReview</a></li>
