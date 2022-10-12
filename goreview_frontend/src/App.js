@@ -1,8 +1,7 @@
 import './App.css';
 import Navigation from './components/Navigation';
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Restaurant from './components/Restaurant';
 import RestaurantList from "./components/RestaurantList";
 import RestaurantReviewPage from './components/RestaurantReviewPage';
 import Footer from './components/Footer';

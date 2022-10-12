@@ -4,7 +4,7 @@ const Navigation = () => {
     return (
         <header>
             <nav id="navbar">
-                <h1>GOReview</h1>
+            <Link to={`/`}><h1>GOReview</h1></Link>
                 <div id="nav-links-search-div">
                     <ul id="nav-links">
 
