@@ -31,7 +31,7 @@ const NewUser = ({postUser}) => {
         
     }
     return(
-        <>
+        <div id="registration-container">
         <h2>Welcome new user!</h2>
         <form onSubmit={handleFormSubmit}>
             <label for = "userName">Username: </label>
@@ -41,10 +41,13 @@ const NewUser = ({postUser}) => {
             <input type="text" placeholder="full name" name="fullname" onChange={handleChange} value={user.fullname} ></input>
 
             <label for = "email">Email address: </label>
-            <input type="text" placeholder="email" name="email" onChange={handleChange} value={user.email}></input>
+            <input type="text" placeholder="example@email.com" name="email" onChange={handleChange} value={user.email}></input>
+
+            <label for="password">Password: </label>
+            <input type="password" name="password"></input>
             <input type="submit"></input>
         </form>
-        </>
+        </div>
     )
     
 }

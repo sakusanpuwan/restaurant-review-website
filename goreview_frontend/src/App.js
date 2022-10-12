@@ -1,8 +1,7 @@
 import './App.css';
 import Navigation from './components/Navigation';
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Restaurant from './components/Restaurant';
 import RestaurantList from "./components/RestaurantList";
 import RestaurantReviewPage from './components/RestaurantReviewPage';
 import Footer from './components/Footer';
@@ -36,8 +35,6 @@ function App() {
       const userData = await response.json();
       setUsers(userData);
     }
-
-    const postReview = (newReview) => {
 
     const postReview = (newReview) => {
         fetch(`http://localhost:8080/reviews?username=${newReview.username}&restaurantId=${newReview.restaurantId}`, {
@@ -80,9 +77,12 @@ function App() {
 
     }
 
+<<<<<<< HEAD
 
   
 
+=======
+>>>>>>> 6f91a01eb3e252d4a5d5f7da099c2f5529a7e986
   
   return (
     <div className="App">
@@ -91,11 +91,20 @@ function App() {
           <Navigation />
           
           <Routes>
+<<<<<<< HEAD
             <Route path={"/"} element={<RestaurantList restaurants={restaurants} reviews={reviews}  />} />
             <Route path={'/italian'} element={<RestaurantList restaurants={italianRestaurants} reviews={reviews}  />} />
             <Route path={'/american'} element={<RestaurantList restaurants={americanRestaurants} reviews={reviews}  />} />
             <Route path={'/japanese'} element={<RestaurantList restaurants={japaneseRestaurants} reviews={reviews}  />} />
             <Route path={'/spanish'} element={<RestaurantList restaurants={spanishRestaurants} reviews={reviews}  />} />
+=======
+          <Route path={"/"} element={<RestaurantList restaurants={restaurants} reviews={reviews}  />} />
+            <Route path={"/italian"} element={<RestaurantList restaurants={italianRestaurants} reviews={reviews}  />} />
+            <Route path={"/american"} element={<RestaurantList restaurants={americanRestaurants} reviews={reviews}  />} />
+            <Route path={"/japanese"} element={<RestaurantList restaurants={japaneseRestaurants} reviews={reviews}  />} />
+            <Route path={"/spanish"} element={<RestaurantList restaurants={spanishRestaurants} reviews={reviews}  />} />
+            <Route path={"/british"} element={<RestaurantList restaurants={britishRestaurants} reviews={reviews}  />} />
+>>>>>>> 6f91a01eb3e252d4a5d5f7da099c2f5529a7e986
           
             {restaurants.map(restaurant => {
 
@@ -113,6 +122,6 @@ function App() {
         </BrowserRouter>
     </div>
   )
-}}
+}
 
 export default App;

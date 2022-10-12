@@ -4,19 +4,19 @@ const Navigation = () => {
     return (
         <header>
             <nav id="navbar">
-                <h1>GOReview</h1>
+            <Link to={`/`}><h1>GOReview</h1></Link>
                 <div id="nav-links-search-div">
                     <ul id="nav-links">
 
-                        <Link className="register" to={`/new-user`}><li><a className="nav-link" href="/new-user">Register</a></li></Link>
-                        <li><a className="nav-link" href="#projects">My Account</a></li>
+                        <Link className="register" to={`/new-user`}><li>Register</li></Link>
+                        <li><a className="nav-link" href="#">My Account</a></li>
                     </ul>
                     <input type="text" name="search" placeholder="Search"></input>
                 </div>
                 <div id="mobile-nav">
                     <ul id="nav-links-mobile">
-                    <Link className="register" to={`/new-user`}><li><a className="nav-link" href="/new-user">Register</a></li></Link>
-                        <li><a className="nav-link" href="#projects">My Account</a></li>
+                    <Link className="register" to={`/new-user`}><li>Register</li></Link>
+                        <li><a className="nav-link" href="#">My Account</a></li>
                     </ul>
                     <input type="text" name="search" placeholder="Search"></input>
                 </div>
