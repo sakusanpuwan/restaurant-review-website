@@ -63,7 +63,7 @@ const ReviewForm = ({restaurant,onSubmit}) => {
                     value={newReview.dateOfVisit}
                 />
                 
-                <label for="pricing">Pricing</label>
+                <label htmlFor="pricing">Pricing</label>
                     <select name="pricing" id="pricing" onChange={handleChange} value={newReview.pricing}>
                         <option value="£">£</option>
                         <option value="££">££</option>
@@ -72,7 +72,7 @@ const ReviewForm = ({restaurant,onSubmit}) => {
                         <option value="£££££">£££££</option>
                     </select>
 
-                    <label for="rating">Rating</label>
+                    <label htmlFor="rating">Rating</label>
                     <select name="rating" id="rating" onChange={handleChange} value={newReview.rating}>
                         <option value="EXCELLENT">Excellent</option>
                         <option value="GOOD">Good</option>
@@ -83,66 +83,66 @@ const ReviewForm = ({restaurant,onSubmit}) => {
 
 
 
-                <label for="accessibility">Accessibility</label> 
+                <label htmlFor="accessibility">Accessibility</label> 
 
-                {/* <label for="dog_friendly">
+                {/* <label htmlFor="dog_friendly">
                     <input type = "checkbox" checked={checked} onChange={handleBoxChange} name="accessibility" value="dog_friendly" id="dog_friendly"/>
                     Dog Friendly
                 </label> */}
                 {/* <p> Is "it" checked? {checked.toString()</p> */}
-                <div class="box">
+                <div className="box">
                     <input id="dog_friendly" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
-                    <label for="dog_friendly">Dog Friendly</label>
+                    <label htmlFor="dog_friendly">Dog Friendly</label>
                 </div>
-                <div class="box">
+                <div className="box">
                     <input id="child_friendly" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
-                    <label for="child_friendly">Child Friendly</label>
+                    <label htmlFor="child_friendly">Child Friendly</label>
                 </div>
-                <div class="box">
+                <div className="box">
                     <input id="accessible_menu" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
-                    <label for="accessible_menu">Accessible Menu</label>
+                    <label htmlFor="accessible_menu">Accessible Menu</label>
                 </div>
-                <div class="box">
+                <div className="box">
                     <input id="wheelchair_access" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
-                    <label for="wheelchair_access">Wheelchair Access</label>
+                    <label htmlFor="wheelchair_access">Wheelchair Access</label>
                 </div>
-                <div class="box">
+                <div className="box">
                     <input id="accessible_parking" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
-                    <label for="accessible_parking">Accessible Parking</label>
+                    <label htmlFor="accessible_parking">Accessible Parking</label>
                 </div>
-                <div class="box">
+                <div className="box">
                     <input id="accessible_bathrooms" type="checkbox" name="accessibility" onChange={handleBoxChange} value={newReview.accessibility}/>
-                    <label for="accessible_bathrooms">Accessible Bathrooms</label>
+                    <label htmlFor="accessible_bathrooms">Accessible Bathrooms</label>
                 </div>
 
                 <label htmlFor="diet">Available Dietary Restrictions:</label> 
                 <div>
                     <input id="dairy_free" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
-                    <label for="dairy_free">Dairy Free</label>
+                    <label htmlFor="dairy_free">Dairy Free</label>
                 </div>
                 <div>
                     <input id="nut_free" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
-                    <label for="nut_free">Nut Free</label>
+                    <label htmlFor="nut_free">Nut Free</label>
                 </div>
                 <div>
                     <input id="fish_free" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
-                    <label for="fish_free">Fish Free</label>
+                    <label htmlFor="fish_free">Fish Free</label>
                 </div>
                 <div>
                     <input id="gluten_free" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
-                    <label for="gluten_free">Gluten Free</label>
+                    <label htmlFor="gluten_free">Gluten Free</label>
                 </div>
                 <div>
                     <input id="halal" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
-                    <label for="halal">Halal</label>
+                    <label htmlFor="halal">Halal</label>
                 </div>
                 <div>
                     <input id="vegetarian" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
-                    <label for="vegetarian">Vegetarian</label>
+                    <label htmlFor="vegetarian">Vegetarian</label>
                 </div>
                 <div>
                     <input id="vegan" type="checkbox" name="diet" onChange={handleBoxChange} value={newReview.diet}/>
-                    <label for="vegan">Vegan</label>
+                    <label htmlFor="vegan">Vegan</label>
                 </div>
 
                 <label htmlFor="optionalMessage">Write your review</label>
