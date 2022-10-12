@@ -138,8 +138,27 @@ h1 {
 }
 
 .restaurant-card img {
+    margin-top: 10px;
     width: 250px;
     height: 150px;
+}
+
+#filters-container {
+    margin: 30px;
+}
+
+.filter-btn {
+    margin: 0px 5px;
+    color: #225b61;
+    background-color: #FAC933;
+    box-shadow: none;
+    border: 1px solid black;
+    padding: 3px 5px;
+}
+
+.filter-btn:hover {
+    background-color: #dfc986;
+    cursor: pointer;
 }
 
 #container {
@@ -154,9 +173,9 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     float: right;
-  }
+}
 
-  form {
+form {
     color: white;
     box-sizing: border-box;
     border-radius: 2rem;
@@ -165,14 +184,14 @@ input[type=submit] {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10rem;
-  }
+}
 
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
 
-  input[type=text], select, textarea{
+input[type=text], select, textarea{
     width: 100%;
     height: 100%;
     padding: 12px;
@@ -180,19 +199,19 @@ label {
     border-radius: 4px;
     box-sizing: border-box;
     resize: vertical;
-  }
+}
 
- .box{
+.box{
     display: flex;
- }
+}
 
-  #footer-div {
+#footer-div {
     font-size: 1.1rem;
     padding-top: 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-  }
+}
 
 #footer-div li {
     list-style: none;
