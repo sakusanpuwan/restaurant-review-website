@@ -86,7 +86,8 @@ h1 {
 }
 
 #mobile-nav ul {
-    margin-top: -40px;
+    margin-top: -70px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     width: 100%;
