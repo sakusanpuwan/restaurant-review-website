@@ -77,13 +77,6 @@ function App() {
 
     }
 
-<<<<<<< HEAD
-
-  
-
-=======
->>>>>>> 6f91a01eb3e252d4a5d5f7da099c2f5529a7e986
-  
   return (
     <div className="App">
         
@@ -91,20 +84,12 @@ function App() {
           <Navigation />
           
           <Routes>
-<<<<<<< HEAD
-            <Route path={"/"} element={<RestaurantList restaurants={restaurants} reviews={reviews}  />} />
-            <Route path={'/italian'} element={<RestaurantList restaurants={italianRestaurants} reviews={reviews}  />} />
-            <Route path={'/american'} element={<RestaurantList restaurants={americanRestaurants} reviews={reviews}  />} />
-            <Route path={'/japanese'} element={<RestaurantList restaurants={japaneseRestaurants} reviews={reviews}  />} />
-            <Route path={'/spanish'} element={<RestaurantList restaurants={spanishRestaurants} reviews={reviews}  />} />
-=======
           <Route path={"/"} element={<RestaurantList restaurants={restaurants} reviews={reviews}  />} />
             <Route path={"/italian"} element={<RestaurantList restaurants={italianRestaurants} reviews={reviews}  />} />
             <Route path={"/american"} element={<RestaurantList restaurants={americanRestaurants} reviews={reviews}  />} />
             <Route path={"/japanese"} element={<RestaurantList restaurants={japaneseRestaurants} reviews={reviews}  />} />
             <Route path={"/spanish"} element={<RestaurantList restaurants={spanishRestaurants} reviews={reviews}  />} />
             <Route path={"/british"} element={<RestaurantList restaurants={britishRestaurants} reviews={reviews}  />} />
->>>>>>> 6f91a01eb3e252d4a5d5f7da099c2f5529a7e986
           
             {restaurants.map(restaurant => {
 
