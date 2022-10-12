@@ -15,9 +15,9 @@ const Footer = () => {
                 </div>
                 <div>
                     <ul className="footer_right">
-                        <li><a href="#">View all restaurants</a></li>
-                        <li><a href="#">Add review</a></li>
-                        <li><a href="#">Language</a></li>
+                        <li><a href="/">View all restaurants</a></li>
+                        <li><a href="#">Select language</a></li>
+                        <li><a href="#">Accessibility</a></li>
                         <li><a href="https://github.com/joaopulsz/restaurant-review-website">About GOReview</a></li>
                     </ul>
                 </div>

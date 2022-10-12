@@ -6,6 +6,8 @@ import Restaurant from './components/Restaurant';
 import RestaurantList from "./components/RestaurantList";
 import RestaurantReviewPage from './components/RestaurantReviewPage';
 import Footer from './components/Footer';
+import NewUser from './components/NewUser';
+import UserList from './components/UserList';
 
 // const route = `/${restaurant.id}`
 
@@ -14,6 +16,7 @@ function App() {
 
   const [restaurants, setRestaurants] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const [users,setUsers] = useState([]);
 
     const fetchRestaurantData = async () => {
         const response = await fetch('http://localhost:8080/restaurants');
@@ -26,6 +29,12 @@ function App() {
         const response = await fetch('http://localhost:8080/reviews');
         const reviewData = await response.json();
         setReviews(reviewData);
+    }
+
+    const fetchUserData = async () => {
+      const response = await fetch("http://localhost:8080/users")
+      const userData = await response.json();
+      setUsers(userData);
     }
 
 
@@ -51,6 +60,7 @@ function App() {
     useEffect(() => {
         fetchRestaurantData();
         fetchReviewData();
+        fetchUserData();
     },[])
 
 
@@ -58,6 +68,17 @@ function App() {
     const americanRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "AMERICAN"));
     const japaneseRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "JAPANESE"));
     const spanishRestaurants = restaurants.filter((restaurant => restaurant.cuisine === "SPANISH"));
+
+    const postUser = async(newUser) => {
+      await fetch("http://localhost:8080/users",{
+        method:"POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(newUser)
+      })
+
+    }
+
+
   
 
   
@@ -80,6 +101,9 @@ function App() {
               return <Route path={`/${restaurant.id}`} element={<RestaurantReviewPage restaurant={restaurant} reviews = {reviews}/>}/>
             })}
 
+            <Route path={'/new-user'} element={<NewUser postUser={postUser}/>}/>
+
+            <Route path={'/users'} element={<UserList users={users}/>}/>
           </Routes>
 
           <Footer/>

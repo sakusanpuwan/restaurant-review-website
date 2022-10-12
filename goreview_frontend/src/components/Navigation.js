@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navigation = () => {
     return (
         <header>
@@ -5,8 +7,9 @@ const Navigation = () => {
                 <h1>GOReview</h1>
                 <div id="nav-links-search-div">
                     <ul id="nav-links">
-                        <li><a className="nav-link" href="#about-section">Register</a></li>
+                        <Link to={`/new-user`}><li><a className="nav-link" href="/new-user">Register</a></li></Link>
                         <li><a className="nav-link" href="#projects">My Account</a></li>
+                        <Link to={'/users'}><li><a>All users</a></li></Link>
                     </ul>
                     <input type="text" name="search" placeholder="Search"></input>
                 </div>
