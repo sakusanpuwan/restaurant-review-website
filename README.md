@@ -1,6 +1,6 @@
 # Restaurant Review App
 
-***GoReview is a restaurant review website API, which will help you make up your mind before you eat 😋 ***
+GoReview is a restaurant review website API, which will help you make up your mind before you eat 😋
 
 
 ## Table of Contents
@@ -13,7 +13,7 @@
 <br>
 
 ## Who We Are
-We are **Ctrl Alt Elite** - 4 members of Cohort 6 from the Bright Network Technology Academy!: 
+We are **Ctrl Alt Elite** - 3 members of Cohort 6 from the Bright Network Technology Academy!: 
 
 
 Sakusan Puwanendran - GitHub: (https://github.com/sakusanpuwan)
