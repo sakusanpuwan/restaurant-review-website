@@ -12,6 +12,9 @@ const NewUser = ({postUser}) => {
         }
     )
 
+    const [display,setDisplay] = useState("")
+
+
     const handleChange = (event) => {
         let propertyName = event.target.name;
 
@@ -28,6 +31,7 @@ const NewUser = ({postUser}) => {
             fullname:"",
             email:""
         })
+        setDisplay("User " + user.username + " has been created!" );
         
     }
     return(
@@ -47,6 +51,7 @@ const NewUser = ({postUser}) => {
             <input type="password" name="password"></input>
             <input type="submit"></input>
         </form>
+        <h3>{display}</h3>
         </div>
     )
     
