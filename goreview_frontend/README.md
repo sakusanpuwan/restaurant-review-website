@@ -1,17 +1,17 @@
 # GoReview Application 🍕
 
-GoReview is a restaurant review website, which will help you make up your mind before you eat 😋
+GoReview is a restaurant review website, which will help you make up your mind before you eat 😋 This collaborative project was completed as part of the Bright Network Technology Academy programme. 
 
 ## Who we are 
 
-We are Ctrl Alt Elite - 3 members of Cohort 6 from the Bright Network Technology Academy!
-  Sakusan Puwanendran 🍔 | https://github.com/sakusanpuwan
-  Kat Fagg 🌮 | https://github.com/katfagg
-  João Pedro Canale Pulsz 🍗 | https://github.com/joaopulsz
+We are Ctrl Alt Elite - 3 members of Cohort 6 from the Bright Network Technology Academy!  
+  Sakusan Puwanendran 🍔 | https://github.com/sakusanpuwan/  
+  Kat Fagg 🌮 | https://github.com/katfagg/ 
+  João Pedro Canale Pulsz 🍗 | https://github.com/joaopulsz/  
 
 ## Project Overview 
 
-This collaborative project was completed as part of the Bright Network Technology Academy programme. We have built a React application that interacts with a Spring API. Main user features of our app:
+We have built a React application that interacts with a Spring API. Main user features of our app:
 
 Filter restaurants by cuisine
 Select a restaurant to view all reviews and submit a new review
