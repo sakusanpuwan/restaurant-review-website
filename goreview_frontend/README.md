@@ -5,9 +5,10 @@ GoReview is a restaurant review website, which will help you make up your mind b
 ## Who we are 
 
 We are Ctrl Alt Elite - 3 members of Cohort 6 from the Bright Network Technology Academy!  
-  Sakusan Puwanendran 🍔 | https://github.com/sakusanpuwan/  
-  Kat Fagg 🌮 | https://github.com/katfagg/ 
-  João Pedro Canale Pulsz 🍗 | https://github.com/joaopulsz/  
+
+Sakusan Puwanendran 🍔 | https://github.com/sakusanpuwan  
+Kat Fagg 🌮 | https://github.com/katfagg  
+João Pedro Canale Pulsz 🍗 | https://github.com/joaopulsz    
 
 ## Project Overview 
 
