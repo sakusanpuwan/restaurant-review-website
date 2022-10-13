@@ -46,7 +46,8 @@ const ReviewForm = ({restaurant, postReview}) => {
 
     return(
         <div>
-            <h2 id="review-form-heading">Submit a Review</h2>
+        <h2 id="review-form-heading">Submit a Review</h2>
+        <div className="form-contents">
             <p id="required-fields">
                 Required fields are followed by
                 <strong><span aria-label="required"> *</span></strong>.
@@ -157,13 +158,16 @@ const ReviewForm = ({restaurant, postReview}) => {
                         <label htmlFor="VEGAN">Vegan</label>
                     </div>
                 </fieldset>
-                
+
+                <div id="message-box">
                 <label htmlFor="optionalMessage"><strong>Write your review</strong></label>
                 <textarea placeholder="Max 200 characters" id="optionalMessage" name="optionalMessage" onChange={handleChange} value={newReview.optionalMessage} rows="4" cols="30" maxLength="100">
                 </textarea>
+                </div>
                 
                 <input id="form-submit-btn" type="submit" name="submit" value="Submit Review"/>
             </form>
+            </div>
         </div>
     );
 }
