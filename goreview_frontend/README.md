@@ -47,6 +47,7 @@ npm start``
 ![Screenshot 2022-10-10 at 10 23 24 (1)](https://user-images.githubusercontent.com/108692801/195603532-7ad3a22b-974a-4cb2-a69f-8817c9a2d0bd.png) 
 
 ### Component Structure 
+![Screenshot 2022-10-13 at 14 37 51](https://user-images.githubusercontent.com/37752062/195616937-b6edb9f6-0578-4e03-b696-41dbb055a2d2.png)
 
 
 ## MVP:
