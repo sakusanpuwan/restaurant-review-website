@@ -16,9 +16,9 @@ We have built a React application that interacts with a Spring API. The fundamen
 
 ### What can I do with this app?
 
-*View all restaurants and filter restaurants by cuisine
-*Select a restaurant to view all reviews and submit a new review
-*Add yourself as a new user using the “register” button
+*View all restaurants and filter restaurants by cuisine  
+*Select a restaurant to view all reviews and submit a new review  
+*Add yourself as a new user using the “register” button  
 
 ## Step-By-Step Instructions for Initial Setup 
 
