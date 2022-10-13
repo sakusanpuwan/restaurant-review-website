@@ -12,7 +12,7 @@ const Restaurant = ({restaurant, reviews}) => {
         const response = await fetch(`http://localhost:8080/restaurants/rating/${restaurant.id}`)
         const ratingData = await response.json();
         if (parseInt(ratingData) > 0) {
-            setRating(ratingData);
+            setRating(parseFloat(ratingData).toFixed(2));
         } else {
             setRating("-");
         }
@@ -31,7 +31,7 @@ const Restaurant = ({restaurant, reviews}) => {
 
                 <p>Location: {restaurant.location}</p>
                 <p>Cuisine: {restaurant.cuisine}</p>
-                <p>Rating: {parseFloat(rating).toFixed(2)}⭐️</p>
+                <p>Rating: {rating} ⭐️</p>
             </div>
         </Link>
         </>
