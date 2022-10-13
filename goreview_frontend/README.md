@@ -48,10 +48,6 @@ npm start``
 
 ### Component Structure 
 
-<img width="1277" alt="Screenshot 2022-10-10 at 14 03 48" src="https://user-images.githubusercontent.com/108692801/195603581-fe84f489-b438-44ed-896b-df802cc17caa.png">
-
-![GoReviewDiagram](https://user-images.githubusercontent.com/83042977/190619825-7a42cb40-813f-435d-84d7-e7d9965164c6.png)
-
 
 ## MVP:
 
