@@ -15,20 +15,13 @@
 ## Who We Are
 We are **Ctrl Alt Elite** - 4 members of Cohort 6 from the Bright Network Technology Academy!: 
 
-<details>
-<summary>Sakusan Puwanendran</summary>
-  - GitHub: (https://github.com/sakusanpuwan)
-</details>
 
-<details>
-<summary>Kat Fagg</summary>
-  - GitHub:(https://github.com/katfagg)
-</details>
+Sakusan Puwanendran - GitHub: (https://github.com/sakusanpuwan)
 
-<details>
-<summary>João Pedro Canale Pulsz</summary>
-  - GitHub:(https://github.com/joaopulsz)
-</details>
+Kat Fagg - GitHub:(https://github.com/katfagg)
+
+João Pedro Canale Pulsz - GitHub:(https://github.com/joaopulsz)
+
  
 ## Project Overview
 
