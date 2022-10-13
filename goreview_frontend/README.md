@@ -54,10 +54,11 @@ npm start``
 
 ## MVP:
 
-* Show all restaurants
+* Show all restaurants and displaying relevant info such as location, photos and a rating
 * Use routing to render a new page populated with reviews when user chooses a restaurant
-* Form to submit a new review which is automatically updated in the list of reviews
-* Register new user
+* Use routing and linked items to help user navigate the site
+* Form to submit a new review which sends a POST request to the local server and automatically updates the list of reviews
+* Form to register a new user by sending a POST request to the local server and rendering a list of all users
 * Filter restaurants by cuisine
 
 ## Extensions: 
