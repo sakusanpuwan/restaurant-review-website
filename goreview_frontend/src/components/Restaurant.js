@@ -31,7 +31,7 @@ const Restaurant = ({restaurant, reviews}) => {
 
                 <p>Location: {restaurant.location}</p>
                 <p>Cuisine: {restaurant.cuisine}</p>
-                <p>Rating: {rating}⭐️</p>
+                <p>Rating: {parseFloat(rating).toFixed(2)}⭐️</p>
             </div>
         </Link>
         </>
