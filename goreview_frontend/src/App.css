@@ -186,6 +186,10 @@ h1 {
     margin-bottom: 50px;
 }
 
+#required-fields {
+    text-align: center;
+}
+
 input[type=submit] {
     width: 300px;
     background-color: #04AA6D;
