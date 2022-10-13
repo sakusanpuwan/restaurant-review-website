@@ -51,30 +51,30 @@ npm start``
 
 ## MVP:
 
-Show all restaurants
-Use routing to render a new page populated with reviews when user chooses a restaurant
-Form to submit a new review which is automatically updated in the list of reviews
-Register new user
-Filter restaurants by cuisine
+* Show all restaurants
+* Use routing to render a new page populated with reviews when user chooses a restaurant
+* Form to submit a new review which is automatically updated in the list of reviews
+* Register new user
+* Filter restaurants by cuisine
 
 ## Extensions: 
 
-Order reviews reverse chronologically
-Reformat review components to be capitalised
+* Order reviews reverse chronologically
+* Reformat review components to be capitalised
 
 ## Further Development
 
-Add thumbs up icon for each review
-Enable user to edit a review they posted
-Allow user to attach image to review using <file> input type and show this on the review
-Authentication
+* Add thumbs up icon for each review
+* Enable user to edit a review they posted
+* Allow user to attach image to review using <file> input type and show this on the review
+* Authentication
 
 ## Final Comments: 
 
-The most challenging parts of our project were:
+The most challenging parts of our project were:  
 
-Kat => Removing value from state when checkbox is unticked
-Sakusan => Getting new routes to render in a new page as opposed to within the current page
-João => Keeping everything formatted and looking good across different screen sizes.
+* Kat => Removing value from state when checkbox is unticked
+* Sakusan => Getting new routes to render in a new page as opposed to within the current page
+* João => Keeping everything formatted and looking good across different screen sizes.
 
 We would also like to acknowledge the BNTA team, and all the trainers for their amazing support during the program!
