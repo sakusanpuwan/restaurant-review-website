@@ -1,8 +1,11 @@
 import Review from "./Review";
 
 const ReviewList = ({reviews,restaurant}) => {
-    const reviewComponents = reviews.map(review =>{
-        return <Review key={review.id} review={review}/>
+
+    const reviewComponents = [];
+
+    reviews.map(review =>{
+        reviewComponents.unshift(<Review key={review.id} review={review}/>)
     })
 
     return (
