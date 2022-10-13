@@ -12,11 +12,13 @@ João Pedro Canale Pulsz 🍗 | https://github.com/joaopulsz
 
 ## Project Overview 
 
-We have built a React application that interacts with a Spring API. Main user features of our app:
+We have built a React application that interacts with a Spring API. The fundamental idea mimics functionality available on TripAdvisor, Deliveroo etc. 
 
-Filter restaurants by cuisine
-Select a restaurant to view all reviews and submit a new review
-Add a new user using the “register” button
+### What can I do with this app?
+
+*View all restaurants and filter restaurants by cuisine
+*Select a restaurant to view all reviews and submit a new review
+*Add yourself as a new user using the “register” button
 
 ## Step-By-Step Instructions for Initial Setup 
 
@@ -67,6 +69,8 @@ npm start``
 
 * Add thumbs up icon for each review
 * Enable user to edit a review they posted
+* Functional search button
+* Add a new restaurant
 * Allow user to attach image to review using <file> input type and show this on the review
 * Authentication
 
