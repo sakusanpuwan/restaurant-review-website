@@ -158,7 +158,7 @@ const ReviewForm = ({restaurant, postReview}) => {
                         <label htmlFor="VEGAN">Vegan</label>
                     </div>
                 </fieldset>
-
+                
                 <label htmlFor="optionalMessage"><strong>Write your review</strong></label>
                 <textarea placeholder="Max 200 characters" id="optionalMessage" name="optionalMessage" onChange={handleChange} value={newReview.optionalMessage} rows="4" cols="30" maxLength="100">
                 </textarea>
