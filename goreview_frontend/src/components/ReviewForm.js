@@ -41,8 +41,7 @@ const ReviewForm = ({restaurant, postReview}) => {
     }
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-        postReview(newReview)
+        postReview(newReview);
     };
 
     return(

@@ -1,4 +1,8 @@
+import ReviewList from "./ReviewList";
+
 const Review = ({review}) => {
+
+    reviews.sort
 
     return (
         <div className="review-card">
