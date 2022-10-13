@@ -26,7 +26,6 @@ const Footer = () => {
                 </div>
                 <div className="footer_middle">
                     <h4>© 2022 GoReview BNTA</h4>
-
                 </div>
             </footer>
         </>

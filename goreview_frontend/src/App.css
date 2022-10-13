@@ -264,6 +264,10 @@ input[type=submit] {
     color: #666;
 }
 
+#footer-div div {
+    width: 30%;
+}
+
 .footer_left li {
     padding: 5px;
 }

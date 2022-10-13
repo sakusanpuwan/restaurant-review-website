@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const RestaurantList = ({restaurants, reviews}) => {
 
-    const restaurantComponents = restaurants.map(restaurant => <Restaurant restaurant={restaurant} reviews = {reviews} />);
+    const restaurantComponents = restaurants.map(restaurant => <Restaurant key={restaurant.id} restaurant={restaurant} reviews ={reviews} />);
 
     return (
         <div id="container">

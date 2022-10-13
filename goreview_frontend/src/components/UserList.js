@@ -4,7 +4,6 @@ const UserList = ({users}) => {
 
     return(
         <>
-    
         <h3>User List</h3>
         {userComponents}
         </>

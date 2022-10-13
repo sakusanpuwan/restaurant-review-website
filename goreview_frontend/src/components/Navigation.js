@@ -7,7 +7,6 @@ const Navigation = () => {
             <Link to={`/`}><h1>GOReview</h1></Link>
                 <div id="nav-links-search-div">
                     <ul id="nav-links">
-
                         <Link className="register" to={`/new-user`}><li>Register</li></Link>
                         <li><a className="nav-link" href="#">My Account</a></li>
                     </ul>

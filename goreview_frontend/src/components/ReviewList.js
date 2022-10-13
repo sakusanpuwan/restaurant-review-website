@@ -1,6 +1,6 @@
 import Review from "./Review";
 
-const ReviewList = ({reviews,restaurant}) => {
+const ReviewList = ({reviews, restaurant}) => {
 
     const reviewComponents = [];
 

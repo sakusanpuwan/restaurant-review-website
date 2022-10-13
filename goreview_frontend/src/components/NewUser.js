@@ -8,12 +8,10 @@ const NewUser = ({postUser}) => {
             username: "",
             fullname:"",
             email:""
-
         }
     )
 
     const [display,setDisplay] = useState("")
-
 
     const handleChange = (event) => {
         let propertyName = event.target.name;
@@ -38,16 +36,16 @@ const NewUser = ({postUser}) => {
         <div id="registration-container">
         <h2>Welcome new user!</h2>
         <form onSubmit={handleFormSubmit}>
-            <label for = "userName">Username: </label>
+            <label htmlFor = "userName">Username: </label>
             <input type="text" placeholder="user name" name="username" onChange={handleChange} value={user.username}></input>
 
-            <label for = "fullName">Full name: </label>
+            <label htmlFor = "fullName">Full name: </label>
             <input type="text" placeholder="full name" name="fullname" onChange={handleChange} value={user.fullname} ></input>
 
-            <label for = "email">Email address: </label>
+            <label htmlFor = "email">Email address: </label>
             <input type="text" placeholder="example@email.com" name="email" onChange={handleChange} value={user.email}></input>
 
-            <label for="password">Password: </label>
+            <label htmlFor="password">Password: </label>
             <input type="password" name="password"></input>
             <input type="submit"></input>
         </form>

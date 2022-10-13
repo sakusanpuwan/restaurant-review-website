@@ -8,9 +8,6 @@ import Footer from './components/Footer';
 import NewUser from './components/NewUser';
 import UserList from './components/UserList';
 
-// const route = `/${restaurant.id}`
-
-
 function App() {
 
   const [restaurants, setRestaurants] = useState([]);
@@ -21,7 +18,6 @@ function App() {
         const response = await fetch('http://localhost:8080/restaurants');
         const restaurantData = await response.json();
         setRestaurants(restaurantData);
-       
     }
 
     const fetchReviewData = async () => {
@@ -31,9 +27,9 @@ function App() {
     }
 
     const fetchUserData = async () => {
-      const response = await fetch("http://localhost:8080/users")
-      const userData = await response.json();
-      setUsers(userData);
+        const response = await fetch("http://localhost:8080/users")
+        const userData = await response.json();
+        setUsers(userData);
     }
 
     const postReview = (newReview) => {
@@ -42,9 +38,7 @@ function App() {
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newReview)
         })
-
           .then(response => response.json())
-          // .then(savedReview => setReviews([...reviews, savedReview])) // "review with id 13 created by alice1"
           .then(fetchReviewData())
     }
 
@@ -74,7 +68,6 @@ function App() {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(newUser)
       })
-
     }
 
   return (
@@ -93,7 +86,7 @@ function App() {
           
             {restaurants.map(restaurant => {
 
-              return <Route path={`/${restaurant.id}`} element={<RestaurantReviewPage restaurant={restaurant} postReview={postReview} reviews = {reviews}/>}/>
+              return <Route key={restaurant.id} path={`/${restaurant.id}`} element={<RestaurantReviewPage restaurant={restaurant} postReview={postReview} reviews = {reviews}/>}/>
             })}
 
 
