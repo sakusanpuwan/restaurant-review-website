@@ -46,7 +46,7 @@ const ReviewForm = ({restaurant, postReview}) => {
 
     return(
         <div>
-            <h2 id="review-form-heading">Submit a Review:</h2>
+            <h2 id="review-form-heading">Submit a Review</h2>
             <p id="required-fields">
                 Required fields are followed by
                 <strong><span aria-label="required"> *</span></strong>.

@@ -2,6 +2,7 @@ import ReviewList from "./ReviewList";
 
 const Review = ({review}) => {
 
+
     return (
         <div className="review-card">
             <h4>{review.user.fullName} - {review.dateOfVisit}</h4>
