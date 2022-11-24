@@ -1,6 +1,6 @@
 # Restaurant Review App
 
-GoReview is a restaurant review website API, which will help you make up your mind before you eat 😋
+GoReview is a restaurant review website react app, which will help you make up your mind before you eat 😋
 
 ## Restaurant Page
 ![Screenshot 2022-10-13 at 15 23 05](https://user-images.githubusercontent.com/37752062/195623399-aa188f22-7f6d-44fd-b55a-ad7bcebe37db.png)
